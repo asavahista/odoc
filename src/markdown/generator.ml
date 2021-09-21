@@ -8,22 +8,25 @@ module Markup = struct
     | Block of t list
     | Concat of t list
     | Break
+    | Space
     | Anchor of string
     | String of string
-    | Env of indent * string * t * string
-    | Command of string * t
+    | Backticks
+    | Nbsp
     | OpenSqBracket
     | CloseSqBracket
     | OpenParenthesis
     | CloseParenthesis
 
-  and indent = Any
-
-  let env indent s s' t = Env (indent, s, t, s')
-
   let noop = Concat []
 
   let break = Break
+
+  let nbsp = Nbsp
+
+  let space = Space
+
+  let backticks = Backticks
 
   let open_sq_bracket, close_sq_bracket = (OpenSqBracket, CloseSqBracket)
 
@@ -38,7 +41,7 @@ module Markup = struct
 
   let ( ++ ) = append
 
-  let concat = List.fold_left ( ++ ) (Concat [])
+  let concat ts = Concat ts
 
   let rec intersperse ~sep = function
     | [] -> []
@@ -47,11 +50,13 @@ module Markup = struct
 
   let list ?(sep = Concat []) l = concat @@ intersperse ~sep l
 
-  let str fmt = Format.ksprintf (fun s -> String s) fmt
+  let anchor' s = Anchor s
 
-  let escaped fmt = Format.ksprintf (fun s -> String s) fmt
+  let string s = String s
 
-  let command s t = Command (s, t)
+  let str fmt = Format.ksprintf (fun s -> string s) fmt
+
+  let escaped fmt = Format.ksprintf (fun s -> string s) fmt
 
   let rec pp fmt t =
     match t with
@@ -65,13 +70,17 @@ module Markup = struct
         inner b
     | Concat l -> pp_many fmt l
     | Break -> Format.fprintf fmt "@\n"
+    | Space -> Format.fprintf fmt " "
     | Anchor s -> Format.fprintf fmt "<a id=\"%s\"></a>" s
     | String s -> Format.fprintf fmt "%s" s
-    | Env (indent, s, t, s') ->
-        Format.fprintf fmt "@[%s%s%a@]@,%s@]"
-          (match indent with Any -> "")
-          s pp t s'
-    | Command (s, t) -> Format.fprintf fmt "@[%s%a@]" s pp t
+    (* We use double backticks to take care of polymorphic variants or content
+       within backtick, and the spaces before and after the backticks for
+       clarity on what should be enclosed in backticks. For example,
+       "type nums = [ | `One | `Two ]" would be rendered as "``|`````Monday`` "
+       if the spaces were not there.
+    *)
+    | Backticks -> Format.fprintf fmt " `` "
+    | Nbsp -> Format.fprintf fmt "&nbsp; "
     | OpenSqBracket -> Format.fprintf fmt "["
     | CloseSqBracket -> Format.fprintf fmt "]"
     | OpenParenthesis -> Format.fprintf fmt "("
@@ -89,12 +98,17 @@ let raw_markup (_ : Raw_markup.t) = noop
 
 let style (style : style) content =
   match style with
-  | `Bold -> command "**" (content ++ str "**")
-  | `Italic | `Emphasis -> command "_" (content ++ str "_")
-  | `Superscript -> command "<sup>" content
-  | `Subscript -> command "<sub>" content
+  | `Bold -> string "**" ++ (content ++ str "**")
+  | `Italic | `Emphasis -> string "_" ++ (content ++ str "_")
+  | `Superscript -> string "<sup>" ++ content
+  | `Subscript -> string "<sub>" ++ content
 
-let generate_links = ref false
+(*I'm not sure if `make_hashes` is the best name to use! *)
+let make_hashes n = String.make n '#'
+
+type args = { generate_links : bool ref }
+
+let args = { generate_links = ref true }
 
 let rec source_code (s : Source.t) =
   match s with
@@ -114,42 +128,50 @@ and inline (l : Inline.t) =
       | Text _ ->
           let l, _, rest =
             Doctree.Take.until l ~classify:(function
-              | { Inline.desc = Text s; _ } -> Accum [ s ]
+              | { Inline.desc = Text s; _ } -> (
+                  match s with
+                  | "end" ->
+                      Accum
+                        [
+                          break ++ space
+                          ++ string (make_hashes 6)
+                          ++ space ++ nbsp ++ string s;
+                        ]
+                  | _ -> Accum [ str "%s" s ])
               | _ -> Stop_and_keep)
           in
-          str {|%s|} (String.concat "" l) ++ inline rest
+          concat l ++ inline rest
       | Entity e ->
           let x = entity e in
           x ++ inline rest
       | Styled (sty, content) -> style sty (inline content) ++ inline rest
       | Linebreak -> break ++ inline rest
       | Link (href, content) ->
-          if !generate_links then
-            (let rec f (content : Inline.t) =
-               match content with
-               | [] -> noop
-               | i :: rest -> (
-                   match i.desc with
-                   | Text s ->
-                       command "" (str "[%s]" s ++ str "(%s)" href) ++ f rest
-                   | _ -> noop ++ f rest)
-             in
-             f content)
-            ++ inline rest
+          if !(args.generate_links) then
+            match content with
+            | [] -> noop
+            | i :: rest ->
+                (match i.desc with
+                | Text _ ->
+                    open_sq_bracket ++ inline content ++ close_sq_bracket
+                    ++ open_parenthesis ++ string href ++ close_parenthesis
+                    ++ inline rest
+                | _ -> inline content ++ inline rest)
+                ++ inline rest
           else inline content ++ inline rest
       | InternalLink (Resolved (link, content)) ->
-          if !generate_links then
+          if !(args.generate_links) then
             match link.page.parent with
             | Some _ -> inline content ++ inline rest
             | None ->
                 open_sq_bracket ++ inline content ++ close_sq_bracket
                 ++ open_parenthesis
-                ++ String ("#" ^ link.anchor)
+                ++ string (make_hashes 1 ^ link.anchor)
                 ++ close_parenthesis ++ inline rest
           else inline content ++ inline rest
       | InternalLink (Unresolved content) -> inline content ++ inline rest
       | Source content ->
-          env Any "`` " "`` " (source_code content) ++ inline rest
+          backticks ++ source_code content ++ backticks ++ inline rest
       | Raw_markup t -> raw_markup t ++ inline rest)
 
 let rec block (l : Block.t) =
@@ -165,7 +187,7 @@ let rec block (l : Block.t) =
             let bullet =
               match list_typ with
               | Unordered -> escaped "- "
-              | Ordered -> str "%d) " (n + 1)
+              | Ordered -> str "%d. " (n + 1)
             in
             bullet ++ block b ++ break
           in
@@ -183,7 +205,10 @@ let rec block (l : Block.t) =
           in
           list ~sep:break (List.map f descrs) ++ continue rest
       | Source content -> source_code content ++ continue rest
-      | Verbatim content -> str "%s" content ++ continue rest
+      (*TODO: I'm not sure if indenting using spaces is the better way, or
+        creating an indent constructor*)
+      | Verbatim content ->
+          space ++ space ++ space ++ str "%s" content ++ continue rest
       | Raw_markup t -> raw_markup t ++ continue rest)
 
 let expansion_not_inlined url = not (Link.should_inline url)
@@ -202,24 +227,28 @@ let take_code l =
 let heading { Heading.label; level; title } =
   let level =
     match level with
-    | 1 -> "#"
-    | 2 -> "##"
-    | 3 -> "###"
-    | 4 -> "####"
-    | 5 -> "#####"
-    | 6 -> "######"
+    (*TODO: We may want to create markup type for these! *)
+    | 1 -> make_hashes 1
+    | 2 -> make_hashes 2
+    | 3 -> make_hashes 3
+    | 4 -> make_hashes 4
+    | 5 -> make_hashes 5
+    | 6 -> make_hashes 6
     | _ -> ""
     (* We can be sure that h6 will never be exceded! *)
   in
   match label with
-  | Some _ -> command level (str " " ++ inline title)
-  | None -> command (level ^ " ") (inline title)
+  | Some _ -> (
+      match level with
+      | "#" -> string level ++ (space ++ inline title)
+      | _ -> string level ++ (space ++ inline title ++ break ++ str "---"))
+  | None -> string level ++ space ++ inline title
 
 let inline_subpage = function
   | `Inline | `Open | `Default -> true
   | `Closed -> false
 
-let item_prop nbsp = String ("###### " ^ nbsp)
+let item_prop nbsp = string (make_hashes 6) ++ space ++ nbsp
 
 let rec documented_src (l : DocumentedSrc.t) nbsp =
   match l with
@@ -255,8 +284,8 @@ let rec documented_src (l : DocumentedSrc.t) nbsp =
               | `N l -> documented_src l nbsp
             in
             let anchor = match anchor with Some a -> a.anchor | None -> "" in
-            break ++ break ++ Anchor anchor ++ break ++ item_prop nbsp
-            ++ content ++ break ++ break ++ str "  " ++ doc ++ break ++ break
+            break ++ break ++ anchor' anchor ++ break ++ item_prop nbsp
+            ++ content ++ break ++ break ++ space ++ doc ++ break ++ break
           in
           let l = list ~sep:noop (List.map f lines) in
           l ++ continue rest)
@@ -277,11 +306,11 @@ and item nbsp (l : Item.t list) : Markup.t =
       | Text b -> block b ++ continue rest
       | Heading h -> break ++ heading h ++ break ++ continue rest
       | Declaration { attr = _; anchor; content; doc } ->
-          let nbsp' = "&nbsp; &nbsp; &nbsp;" in
-          let decl = documented_src content (nbsp ^ nbsp') in
+          let nbsp' = nbsp ++ nbsp ++ nbsp in
+          let decl = documented_src content (nbsp ++ nbsp') in
           let doc = match doc with [] -> noop | doc -> block doc ++ break in
           let anchor = match anchor with Some x -> x.anchor | None -> "" in
-          Anchor anchor ++ break ++ item_prop nbsp ++ decl ++ break ++ break
+          anchor' anchor ++ break ++ item_prop nbsp ++ decl ++ break ++ break
           ++ doc ++ continue rest
       | Include
           { attr = _; anchor = _; content = { summary; status; content }; doc }
@@ -299,19 +328,20 @@ let on_sub subp =
   | `Page p -> if Link.should_inline p.Subpage.content.url then Some 1 else None
   | `Include incl -> if inline_subpage incl.Include.status then Some 0 else None
 
-let rec calc_subpages (generate_links : bool) { Subpage.content; _ } =
+let rec calc_subpages { Subpage.content; _ } (generate_links : bool) =
   [ page generate_links content ]
 
-and subpages generate_links i =
-  Utils.flatmap ~f:(calc_subpages generate_links) @@ Doctree.Subpages.compute i
+and subpages p (generate_links : bool) =
+  Utils.flatmap ~f:(fun sp -> calc_subpages sp generate_links)
+  @@ Doctree.Subpages.compute p
 
 and page generate_links ({ Page.header; items; url; _ } as p) =
   let header = Shift.compute ~on_sub header in
   let items = Shift.compute ~on_sub items in
-  let subpages = subpages generate_links p in
+  let subpages = subpages p generate_links in
   Block
     ([ Inline (Link.for_printing url) ]
-    @ [ item "&nbsp; " header ++ item "&nbsp; " items ]
+    @ [ item nbsp header ++ item nbsp items ]
     @ subpages)
 
 let rec subpage subp =
@@ -320,7 +350,7 @@ let rec subpage subp =
 
 and render (p : Page.t) =
   let content fmt =
-    Format.fprintf fmt "%a" Markup.pp (page !generate_links p)
+    Format.fprintf fmt "%a" Markup.pp (page !(args.generate_links) p)
   in
   let children = Utils.flatmap ~f:subpage @@ Subpages.compute p in
   let filename = Link.as_filename p.url in
