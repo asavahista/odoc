@@ -1,38 +1,41 @@
 OcamlaryDep11
 
- Module `` Ocamlary.Dep11`` 
+ Module  `` Ocamlary.Dep11 `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S = sig
 
 <a id="class-c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;class  c : object
+###### &nbsp; &nbsp; &nbsp; &nbsp; class  c : object
 
 <a id="method-m"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;method m : int
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; method m : int
 
 
-end
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 OcamlaryDep11S
 
- Module type `` Dep11.S`` 
+ Module type  `` Dep11.S `` 
 <a id="class-c"></a>
 ###### &nbsp; class  c : object
 
 <a id="method-m"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;method m : int
+###### &nbsp; &nbsp; &nbsp; &nbsp; method m : int
 
 
-end
+
+ ###### &nbsp; end
 
 
 OcamlaryDep11Sc
 
- Class `` S.c`` 
+ Class  `` S.c `` 
 <a id="method-m"></a>
 ###### &nbsp; method m : int
 

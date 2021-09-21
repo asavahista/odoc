@@ -1,6 +1,6 @@
 Labels
 
- Module `` Labels`` 
+ Module  `` Labels `` 
 
 # Attached to unit
 
@@ -10,7 +10,8 @@ Labels
 
 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... end
+###### &nbsp; module A : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -43,13 +44,16 @@ Attached to external
 
 
 ### Attached to module type
+---
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="class-c"></a>
-###### &nbsp; class  c : object ... end
+###### &nbsp; class  c : object ... 
+ ###### &nbsp; end
 
 
 
@@ -58,8 +62,10 @@ end
 
 
 ### Attached to class type
+---
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -80,9 +86,9 @@ Attached to exception
 ###### &nbsp; type x += 
 
 <a id="extension-X"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| X
+###### &nbsp; &nbsp; &nbsp; &nbsp; | X
 
-  
+ 
 
 
 
@@ -111,9 +117,9 @@ Attached to type subst
 ###### &nbsp; type u = 
 
 <a id="type-u.A'"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A'
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A'
 
-  Attached to constructor
+ Attached to constructor
 
 
 
@@ -125,10 +131,9 @@ Attached to type subst
 ###### &nbsp; type v = {
 
 <a id="type-v.f"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` f : t;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` f : t; `` 
 
-  Attached to field
+ Attached to field
 
 
 
@@ -167,24 +172,24 @@ Testing that labels can be referenced
 
 LabelsA
 
- Module `` Labels.A`` 
+ Module  `` Labels.A `` 
 
 # Attached to module
 
 LabelsS
 
- Module type `` Labels.S`` 
+ Module type  `` Labels.S `` 
 
 # Attached to module type
 
 Labelsc
 
- Class `` Labels.c`` 
+ Class  `` Labels.c `` 
 
 # Attached to class
 
 Labelscs
 
- Class type `` Labels.cs`` 
+ Class type  `` Labels.cs `` 
 
 # Attached to class type

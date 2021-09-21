@@ -1,20 +1,22 @@
 RecentZ
 
- Module `` Recent.Z`` 
+ Module  `` Recent.Z `` 
 <a id="module-Y"></a>
-###### &nbsp; module Y : sig ... end
+###### &nbsp; module Y : sig ... 
+ ###### &nbsp; end
 
 
 RecentZY
 
- Module `` Z.Y`` 
+ Module  `` Z.Y `` 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... end
+###### &nbsp; module X : sig ... 
+ ###### &nbsp; end
 
 
 RecentZYX
 
- Module `` Y.X`` 
+ Module  `` Y.X `` 
 <a id="type-t"></a>
 ###### &nbsp; type 'a t
 

@@ -1,6 +1,6 @@
 Nested
 
- Module `` Nested`` 
+ Module  `` Nested `` 
 
 
 This comment needs to be here before #235 is fixed.
@@ -10,7 +10,8 @@ This comment needs to be here before #235 is fixed.
 
 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... end
+###### &nbsp; module X : sig ... 
+ ###### &nbsp; end
 
 This is module X.
 
@@ -26,10 +27,11 @@ This is module X.
 
 
 ### Type
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 Some type.
 
@@ -38,16 +40,18 @@ Some type.
 
 
 ### Values
+---
 
 
 <a id="val-y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val y : t
+###### &nbsp; &nbsp; &nbsp; &nbsp; val y : t
 
 The value of y.
 
 
 
-end
+
+ ###### &nbsp; end
 
 This is module type Y.
 
@@ -59,7 +63,9 @@ This is module type Y.
 
 
 <a id="module-F"></a>
-###### &nbsp; module F (Arg1 : Y) (Arg2 : sig ... end) : sig ... end
+###### &nbsp; module F (Arg1 : Y) (Arg2 : sig ... 
+ ###### &nbsp; end) : sig ... 
+ ###### &nbsp; end
 
 This is a functor F.
 
@@ -71,7 +77,8 @@ This is a functor F.
 
 
 <a id="class-z"></a>
-###### &nbsp; class virtual  z : object ... end
+###### &nbsp; class virtual  z : object ... 
+ ###### &nbsp; end
 
 This is class z.
 
@@ -79,12 +86,13 @@ This is class z.
 
 
 <a id="class-inherits"></a>
-###### &nbsp; class virtual  inherits : object ... end
+###### &nbsp; class virtual  inherits : object ... 
+ ###### &nbsp; end
 
 
 NestedX
 
- Module `` Nested.X`` 
+ Module  `` Nested.X `` 
 
 
 This is module X.
@@ -118,7 +126,7 @@ The value of x.
 
 NestedY
 
- Module type `` Nested.Y`` 
+ Module type  `` Nested.Y `` 
 
 
 This is module type Y.
@@ -152,7 +160,7 @@ The value of y.
 
 NestedF
 
- Module `` Nested.F`` 
+ Module  `` Nested.F `` 
 
 
 This is a functor F.
@@ -174,10 +182,11 @@ Some additional comments.
 
 
 ### Type
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 Some type.
 
@@ -186,16 +195,18 @@ Some type.
 
 
 ### Values
+---
 
 
 <a id="val-y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val y : t
+###### &nbsp; &nbsp; &nbsp; &nbsp; val y : t
 
 The value of y.
 
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -204,16 +215,18 @@ end
 
 
 ### Type
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 Some type.
 
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -230,7 +243,7 @@ Some type.
 
 NestedF1-Arg1
 
- Parameter `` F.1-Arg1`` 
+ Parameter  `` F.1-Arg1 `` 
 
 # Type
 
@@ -256,7 +269,7 @@ The value of y.
 
 NestedF2-Arg2
 
- Parameter `` F.2-Arg2`` 
+ Parameter  `` F.2-Arg2 `` 
 
 # Type
 
@@ -270,7 +283,7 @@ Some type.
 
 Nestedz
 
- Class `` Nested.z`` 
+ Class  `` Nested.z `` 
 
 
 This is class z.
@@ -310,7 +323,7 @@ Some method.
 
 Nestedinherits
 
- Class `` Nested.inherits`` 
+ Class  `` Nested.inherits `` 
 <a id=""></a>
 ###### &nbsp; inherit z
 

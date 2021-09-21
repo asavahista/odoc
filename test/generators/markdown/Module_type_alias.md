@@ -1,6 +1,6 @@
 Module_type_alias
 
- Module `` Module_type_alias`` 
+ Module  `` Module_type_alias `` 
 
 
 Module Type Aliases
@@ -9,10 +9,11 @@ Module Type Aliases
 ###### &nbsp; module type A = sig
 
 <a id="type-a"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type a
+###### &nbsp; &nbsp; &nbsp; &nbsp; type a
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -21,28 +22,32 @@ end
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-C"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module C : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module C : sig
 
 <a id="type-c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type c
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type c
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type b
+###### &nbsp; &nbsp; &nbsp; &nbsp; type b
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -56,39 +61,44 @@ end
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-F"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module F : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module F : sig
 
 <a id="type-f"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type f
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type f
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="argument-1-C"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module C : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module C : sig
 
 <a id="type-c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type c
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type c
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type b
+###### &nbsp; &nbsp; &nbsp; &nbsp; type b
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -97,28 +107,32 @@ end
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-H"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module H : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module H : sig
 
 <a id="type-h"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type h
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type h
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-a"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type a
+###### &nbsp; &nbsp; &nbsp; &nbsp; type a
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -128,14 +142,14 @@ end
 
 Module_type_aliasA
 
- Module type `` Module_type_alias.A`` 
+ Module type  `` Module_type_alias.A `` 
 <a id="type-a"></a>
 ###### &nbsp; type a
 
 
 Module_type_aliasB
 
- Module type `` Module_type_alias.B`` 
+ Module type  `` Module_type_alias.B `` 
 
 # Parameters
 
@@ -144,10 +158,11 @@ Module_type_aliasB
 ###### &nbsp; module C : sig
 
 <a id="type-c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type c
+###### &nbsp; &nbsp; &nbsp; &nbsp; type c
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -161,14 +176,14 @@ end
 
 Module_type_aliasB1-C
 
- Parameter `` B.1-C`` 
+ Parameter  `` B.1-C `` 
 <a id="type-c"></a>
 ###### &nbsp; type c
 
 
 Module_type_aliasE
 
- Module type `` Module_type_alias.E`` 
+ Module type  `` Module_type_alias.E `` 
 
 # Parameters
 
@@ -177,10 +192,11 @@ Module_type_aliasE
 ###### &nbsp; module F : sig
 
 <a id="type-f"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type f
+###### &nbsp; &nbsp; &nbsp; &nbsp; type f
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -188,10 +204,11 @@ end
 ###### &nbsp; module C : sig
 
 <a id="type-c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type c
+###### &nbsp; &nbsp; &nbsp; &nbsp; type c
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -205,21 +222,21 @@ end
 
 Module_type_aliasE1-F
 
- Parameter `` E.1-F`` 
+ Parameter  `` E.1-F `` 
 <a id="type-f"></a>
 ###### &nbsp; type f
 
 
 Module_type_aliasE1-C
 
- Parameter `` E.1-C`` 
+ Parameter  `` E.1-C `` 
 <a id="type-c"></a>
 ###### &nbsp; type c
 
 
 Module_type_aliasG
 
- Module type `` Module_type_alias.G`` 
+ Module type  `` Module_type_alias.G `` 
 
 # Parameters
 
@@ -228,10 +245,11 @@ Module_type_aliasG
 ###### &nbsp; module H : sig
 
 <a id="type-h"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type h
+###### &nbsp; &nbsp; &nbsp; &nbsp; type h
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -245,7 +263,7 @@ end
 
 Module_type_aliasG1-H
 
- Parameter `` G.1-H`` 
+ Parameter  `` G.1-H `` 
 <a id="type-h"></a>
 ###### &nbsp; type h
 

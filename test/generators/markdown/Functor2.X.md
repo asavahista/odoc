@@ -1,6 +1,6 @@
 Functor2X
 
- Module `` Functor2.X`` 
+ Module  `` Functor2.X `` 
 
 # Parameters
 
@@ -9,10 +9,11 @@ Functor2X
 ###### &nbsp; module Y : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -20,10 +21,11 @@ end
 ###### &nbsp; module Z : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -47,14 +49,14 @@ end
 
 Functor2X1-Y
 
- Parameter `` X.1-Y`` 
+ Parameter  `` X.1-Y `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 Functor2X2-Z
 
- Parameter `` X.2-Z`` 
+ Parameter  `` X.2-Z `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

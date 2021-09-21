@@ -1,6 +1,6 @@
 Module
 
- Module `` Module`` 
+ Module  `` Module `` 
 
 
 Foo.
@@ -17,31 +17,33 @@ The module needs at least one signature item, otherwise a bug causes the compile
 ###### &nbsp; module type S = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -59,31 +61,33 @@ end
 ###### &nbsp; module type S3 = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t = int
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t = int
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u = string
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u = string
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -91,26 +95,28 @@ end
 ###### &nbsp; module type S4 = sig
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -118,26 +124,28 @@ end
 ###### &nbsp; module type S5 = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -150,31 +158,34 @@ end
 ###### &nbsp; module type S6 = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-M'"></a>
-###### &nbsp; module M' : sig ... end
+###### &nbsp; module M' : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -182,30 +193,31 @@ end
 ###### &nbsp; module type S7 = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
 
 <a id="module-M"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module M = M'
+###### &nbsp; &nbsp; &nbsp; &nbsp; module M = M'
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -213,46 +225,50 @@ end
 ###### &nbsp; module type S8 = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
 
 <a id="type-v"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type 'a v
+###### &nbsp; &nbsp; &nbsp; &nbsp; type 'a v
 
 
 
 <a id="type-w"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type ('a, 'b) w
+###### &nbsp; &nbsp; &nbsp; &nbsp; type ('a, 'b) w
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-type-S9"></a>
 ###### &nbsp; module type S9 = sig
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-Mutually"></a>
-###### &nbsp; module Mutually : sig ... end
+###### &nbsp; module Mutually : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-Recursive"></a>
-###### &nbsp; module Recursive : sig ... end
+###### &nbsp; module Recursive : sig ... 
+ ###### &nbsp; end
 
 
 ModuleS
 
- Module type `` Module.S`` 
+ Module type  `` Module.S `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -275,16 +291,17 @@ ModuleS
 
 <a id="module-M"></a>
 ###### &nbsp; module M : sig
-end
+
+ ###### &nbsp; end
 
 
 ModuleSM
 
- Module `` S.M`` 
+ Module  `` S.M `` 
 
 ModuleS3
 
- Module type `` Module.S3`` 
+ Module type  `` Module.S3 `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = int
 
@@ -307,16 +324,17 @@ ModuleS3
 
 <a id="module-M"></a>
 ###### &nbsp; module M : sig
-end
+
+ ###### &nbsp; end
 
 
 ModuleS3M
 
- Module `` S3.M`` 
+ Module  `` S3.M `` 
 
 ModuleS4
 
- Module type `` Module.S4`` 
+ Module type  `` Module.S4 `` 
 <a id="type-u"></a>
 ###### &nbsp; type u
 
@@ -334,16 +352,17 @@ ModuleS4
 
 <a id="module-M"></a>
 ###### &nbsp; module M : sig
-end
+
+ ###### &nbsp; end
 
 
 ModuleS4M
 
- Module `` S4.M`` 
+ Module  `` S4.M `` 
 
 ModuleS5
 
- Module type `` Module.S5`` 
+ Module type  `` Module.S5 `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -361,16 +380,17 @@ ModuleS5
 
 <a id="module-M"></a>
 ###### &nbsp; module M : sig
-end
+
+ ###### &nbsp; end
 
 
 ModuleS5M
 
- Module `` S5.M`` 
+ Module  `` S5.M `` 
 
 ModuleS6
 
- Module type `` Module.S6`` 
+ Module type  `` Module.S6 `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -388,20 +408,21 @@ ModuleS6
 
 <a id="module-M"></a>
 ###### &nbsp; module M : sig
-end
+
+ ###### &nbsp; end
 
 
 ModuleS6M
 
- Module `` S6.M`` 
+ Module  `` S6.M `` 
 
 ModuleM'
 
- Module `` Module.M'`` 
+ Module  `` Module.M' `` 
 
 ModuleS7
 
- Module type `` Module.S7`` 
+ Module type  `` Module.S7 `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -428,7 +449,7 @@ ModuleS7
 
 ModuleS8
 
- Module type `` Module.S8`` 
+ Module type  `` Module.S8 `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -450,12 +471,12 @@ ModuleS8
 
 ModuleS9
 
- Module type `` Module.S9`` 
+ Module type  `` Module.S9 `` 
 
 ModuleMutually
 
- Module `` Module.Mutually`` 
+ Module  `` Module.Mutually `` 
 
 ModuleRecursive
 
- Module `` Module.Recursive`` 
+ Module  `` Module.Recursive `` 

@@ -1,8 +1,9 @@
 OcamlaryCanonicalTest
 
- Module `` Ocamlary.CanonicalTest`` 
+ Module  `` Ocamlary.CanonicalTest `` 
 <a id="module-Base"></a>
-###### &nbsp; module Base : sig ... end
+###### &nbsp; module Base : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -12,14 +13,15 @@ OcamlaryCanonicalTest
 
 OcamlaryCanonicalTestBase
 
- Module `` CanonicalTest.Base`` 
+ Module  `` CanonicalTest.Base `` 
 <a id="module-List"></a>
-###### &nbsp; module List : sig ... end
+###### &nbsp; module List : sig ... 
+ ###### &nbsp; end
 
 
 OcamlaryCanonicalTestBaseList
 
- Module `` Base.List`` 
+ Module  `` Base.List `` 
 <a id="type-t"></a>
 ###### &nbsp; type 'a t
 
@@ -31,7 +33,7 @@ OcamlaryCanonicalTestBaseList
 
 OcamlaryCanonicalTestList_modif
 
- Module `` CanonicalTest.List_modif`` 
+ Module  `` CanonicalTest.List_modif `` 
 <a id="type-t"></a>
 ###### &nbsp; type 'c t = 'c Base.List.t
 

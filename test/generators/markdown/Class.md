@@ -1,21 +1,24 @@
 Class
 
- Module `` Class`` 
+ Module  `` Class `` 
 <a id="class-type-empty"></a>
 ###### &nbsp; class type  empty = object
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="class-type-mutually"></a>
 ###### &nbsp; class type  mutually = object
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="class-type-recursive"></a>
 ###### &nbsp; class type  recursive = object
-end
+
+ ###### &nbsp; end
 
 
 
@@ -31,7 +34,8 @@ end
 
 <a id="class-type-empty_virtual"></a>
 ###### &nbsp; class type virtual  empty_virtual = object
-end
+
+ ###### &nbsp; end
 
 
 
@@ -42,7 +46,8 @@ end
 
 <a id="class-type-polymorphic"></a>
 ###### &nbsp; class type 'a polymorphic = object
-end
+
+ ###### &nbsp; end
 
 
 
@@ -52,36 +57,36 @@ end
 
 Classempty
 
- Class type `` Class.empty`` 
+ Class type  `` Class.empty `` 
 
 Classmutually
 
- Class type `` Class.mutually`` 
+ Class type  `` Class.mutually `` 
 
 Classrecursive
 
- Class type `` Class.recursive`` 
+ Class type  `` Class.recursive `` 
 
 Classmutually'
 
- Class `` Class.mutually'`` 
+ Class  `` Class.mutually' `` 
 
 Classrecursive'
 
- Class `` Class.recursive'`` 
+ Class  `` Class.recursive' `` 
 
 Classempty_virtual
 
- Class type `` Class.empty_virtual`` 
+ Class type  `` Class.empty_virtual `` 
 
 Classempty_virtual'
 
- Class `` Class.empty_virtual'`` 
+ Class  `` Class.empty_virtual' `` 
 
 Classpolymorphic
 
- Class type `` Class.polymorphic`` 
+ Class type  `` Class.polymorphic `` 
 
 Classpolymorphic'
 
- Class `` Class.polymorphic'`` 
+ Class  `` Class.polymorphic' `` 

@@ -1,12 +1,13 @@
 OcamlaryAliases
 
- Module `` Ocamlary.Aliases`` 
+ Module  `` Ocamlary.Aliases `` 
 
 
 Let's imitate jst's layout.
 
 <a id="module-Foo"></a>
-###### &nbsp; module Foo : sig ... end
+###### &nbsp; module Foo : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -41,7 +42,8 @@ Let's imitate jst's layout.
 
 
 <a id="module-Std"></a>
-###### &nbsp; module Std : sig ... end
+###### &nbsp; module Std : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -52,10 +54,10 @@ Let's imitate jst's layout.
 
 
 ### include of Foo
+---
 
 
-Just for giggle, let's see what happens when we include `` Foo
-`` .
+Just for giggle, let's see what happens when we include  `` Foo `` .
 
 
 
@@ -80,7 +82,8 @@ Just for giggle, let's see what happens when we include `` Foo
 
 
 <a id="module-E"></a>
-###### &nbsp; module E : sig ... end
+###### &nbsp; module E : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -89,18 +92,19 @@ Just for giggle, let's see what happens when we include `` Foo
 
 
 
-And also, let's refer to `` A.t``  and `` Foo.B.id
-`` 
+And also, let's refer to  `` A.t ``  and  `` Foo.B.id `` 
 
 
 
 <a id="module-P1"></a>
-###### &nbsp; module P1 : sig ... end
+###### &nbsp; module P1 : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-P2"></a>
-###### &nbsp; module P2 : sig ... end
+###### &nbsp; module P2 : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -125,34 +129,39 @@ And also, let's refer to `` A.t``  and `` Foo.B.id
 
 OcamlaryAliasesFoo
 
- Module `` Aliases.Foo`` 
+ Module  `` Aliases.Foo `` 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... end
+###### &nbsp; module A : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-B"></a>
-###### &nbsp; module B : sig ... end
+###### &nbsp; module B : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-C"></a>
-###### &nbsp; module C : sig ... end
+###### &nbsp; module C : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-D"></a>
-###### &nbsp; module D : sig ... end
+###### &nbsp; module D : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-E"></a>
-###### &nbsp; module E : sig ... end
+###### &nbsp; module E : sig ... 
+ ###### &nbsp; end
 
 
 OcamlaryAliasesFooA
 
- Module `` Foo.A`` 
+ Module  `` Foo.A `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -164,7 +173,7 @@ OcamlaryAliasesFooA
 
 OcamlaryAliasesFooB
 
- Module `` Foo.B`` 
+ Module  `` Foo.B `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -176,7 +185,7 @@ OcamlaryAliasesFooB
 
 OcamlaryAliasesFooC
 
- Module `` Foo.C`` 
+ Module  `` Foo.C `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -188,7 +197,7 @@ OcamlaryAliasesFooC
 
 OcamlaryAliasesFooD
 
- Module `` Foo.D`` 
+ Module  `` Foo.D `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -200,7 +209,7 @@ OcamlaryAliasesFooD
 
 OcamlaryAliasesFooE
 
- Module `` Foo.E`` 
+ Module  `` Foo.E `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -212,7 +221,7 @@ OcamlaryAliasesFooE
 
 OcamlaryAliasesStd
 
- Module `` Aliases.Std`` 
+ Module  `` Aliases.Std `` 
 <a id="module-A"></a>
 ###### &nbsp; module A = Foo.A
 
@@ -239,7 +248,7 @@ OcamlaryAliasesStd
 
 OcamlaryAliasesE
 
- Module `` Aliases.E`` 
+ Module  `` Aliases.E `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -251,14 +260,15 @@ OcamlaryAliasesE
 
 OcamlaryAliasesP1
 
- Module `` Aliases.P1`` 
+ Module  `` Aliases.P1 `` 
 <a id="module-Y"></a>
-###### &nbsp; module Y : sig ... end
+###### &nbsp; module Y : sig ... 
+ ###### &nbsp; end
 
 
 OcamlaryAliasesP1Y
 
- Module `` P1.Y`` 
+ Module  `` P1.Y `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -270,7 +280,7 @@ OcamlaryAliasesP1Y
 
 OcamlaryAliasesP2
 
- Module `` Aliases.P2`` 
+ Module  `` Aliases.P2 `` 
 <a id="module-Z"></a>
 ###### &nbsp; module Z = Z
 

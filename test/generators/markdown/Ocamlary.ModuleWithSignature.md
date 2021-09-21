@@ -1,8 +1,7 @@
 OcamlaryModuleWithSignature
 
- Module `` Ocamlary.ModuleWithSignature`` 
+ Module  `` Ocamlary.ModuleWithSignature `` 
 
 
-A plain module of a signature of `` EmptySig
-``  (reference)
+A plain module of a signature of  `` EmptySig ``  (reference)
 

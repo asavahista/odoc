@@ -1,19 +1,21 @@
 Functor2
 
- Module `` Functor2`` 
+ Module  `` Functor2 `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-X"></a>
-###### &nbsp; module X (Y : S) (Z : S) : sig ... end
+###### &nbsp; module X (Y : S) (Z : S) : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -22,61 +24,66 @@ end
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Y : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Y : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="argument-2-Z"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Z : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Z : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-y_t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type y_t = Y.t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type y_t = Y.t
 
 
 
 <a id="type-z_t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type z_t = Z.t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type z_t = Z.t
 
 
 
 <a id="type-x_t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type x_t = y_t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type x_t = y_t
 
 
-end
+
+ ###### &nbsp; end
 
 
 Functor2S
 
- Module type `` Functor2.S`` 
+ Module type  `` Functor2.S `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 Functor2X
 
- Module `` Functor2.X`` 
+ Module  `` Functor2.X `` 
 
 # Parameters
 
@@ -85,10 +92,11 @@ Functor2X
 ###### &nbsp; module Y : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -96,10 +104,11 @@ end
 ###### &nbsp; module Z : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -123,21 +132,21 @@ end
 
 Functor2X1-Y
 
- Parameter `` X.1-Y`` 
+ Parameter  `` X.1-Y `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 Functor2X2-Z
 
- Parameter `` X.2-Z`` 
+ Parameter  `` X.2-Z `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 Functor2XF
 
- Module type `` Functor2.XF`` 
+ Module type  `` Functor2.XF `` 
 
 # Parameters
 
@@ -146,10 +155,11 @@ Functor2XF
 ###### &nbsp; module Y : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -157,10 +167,11 @@ end
 ###### &nbsp; module Z : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -184,14 +195,14 @@ end
 
 Functor2XF1-Y
 
- Parameter `` XF.1-Y`` 
+ Parameter  `` XF.1-Y `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 Functor2XF2-Z
 
- Parameter `` XF.2-Z`` 
+ Parameter  `` XF.2-Z `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

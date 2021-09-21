@@ -1,6 +1,6 @@
 Stop
 
- Module `` Stop`` 
+ Module  `` Stop `` 
 
 
 This test cases exercises stop comments.
@@ -13,10 +13,7 @@ This is normal commented text.
 
 
 
-The next value is `` bar
-`` , and it should be missing from the documentation. There is also an entire module, 
-`` M
-`` , which should also be hidden. It contains a nested stop comment, but that stop comment should not turn documentation back on in this outer module, because stop comments respect scope.
+The next value is  `` bar `` , and it should be missing from the documentation. There is also an entire module,  `` M `` , which should also be hidden. It contains a nested stop comment, but that stop comment should not turn documentation back on in this outer module, because stop comments respect scope.
 
 
 
@@ -28,7 +25,8 @@ Now, we have a nested module, and it has a stop comment between its two items. W
 
 
 <a id="module-N"></a>
-###### &nbsp; module N : sig ... end
+###### &nbsp; module N : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -38,7 +36,7 @@ Now, we have a nested module, and it has a stop comment between its two items. W
 
 StopN
 
- Module `` Stop.N`` 
+ Module  `` Stop.N `` 
 <a id="val-quux"></a>
 ###### &nbsp; val quux : int
 

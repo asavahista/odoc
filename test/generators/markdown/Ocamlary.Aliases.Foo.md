@@ -1,33 +1,38 @@
 OcamlaryAliasesFoo
 
- Module `` Aliases.Foo`` 
+ Module  `` Aliases.Foo `` 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... end
+###### &nbsp; module A : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-B"></a>
-###### &nbsp; module B : sig ... end
+###### &nbsp; module B : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-C"></a>
-###### &nbsp; module C : sig ... end
+###### &nbsp; module C : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-D"></a>
-###### &nbsp; module D : sig ... end
+###### &nbsp; module D : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-E"></a>
-###### &nbsp; module E : sig ... end
+###### &nbsp; module E : sig ... 
+ ###### &nbsp; end
 
 
 OcamlaryAliasesFooA
 
- Module `` Foo.A`` 
+ Module  `` Foo.A `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -39,7 +44,7 @@ OcamlaryAliasesFooA
 
 OcamlaryAliasesFooB
 
- Module `` Foo.B`` 
+ Module  `` Foo.B `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -51,7 +56,7 @@ OcamlaryAliasesFooB
 
 OcamlaryAliasesFooC
 
- Module `` Foo.C`` 
+ Module  `` Foo.C `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -63,7 +68,7 @@ OcamlaryAliasesFooC
 
 OcamlaryAliasesFooD
 
- Module `` Foo.D`` 
+ Module  `` Foo.D `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
@@ -75,7 +80,7 @@ OcamlaryAliasesFooD
 
 OcamlaryAliasesFooE
 
- Module `` Foo.E`` 
+ Module  `` Foo.E `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

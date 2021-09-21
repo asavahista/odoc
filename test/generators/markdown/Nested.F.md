@@ -1,6 +1,6 @@
 NestedF
 
- Module `` Nested.F`` 
+ Module  `` Nested.F `` 
 
 
 This is a functor F.
@@ -22,10 +22,11 @@ Some additional comments.
 
 
 ### Type
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 Some type.
 
@@ -34,16 +35,18 @@ Some type.
 
 
 ### Values
+---
 
 
 <a id="val-y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val y : t
+###### &nbsp; &nbsp; &nbsp; &nbsp; val y : t
 
 The value of y.
 
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -52,16 +55,18 @@ end
 
 
 ### Type
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 Some type.
 
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -78,7 +83,7 @@ Some type.
 
 NestedF1-Arg1
 
- Parameter `` F.1-Arg1`` 
+ Parameter  `` F.1-Arg1 `` 
 
 # Type
 
@@ -104,7 +109,7 @@ The value of y.
 
 NestedF2-Arg2
 
- Parameter `` F.2-Arg2`` 
+ Parameter  `` F.2-Arg2 `` 
 
 # Type
 

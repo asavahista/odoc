@@ -1,8 +1,9 @@
 Stop_dead_link_doc
 
- Module `` Stop_dead_link_doc`` 
+ Module  `` Stop_dead_link_doc `` 
 <a id="module-Foo"></a>
-###### &nbsp; module Foo : sig ... end
+###### &nbsp; module Foo : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -10,9 +11,9 @@ Stop_dead_link_doc
 ###### &nbsp; type foo = 
 
 <a id="type-foo.Bar"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Bar of Foo.t
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Bar of Foo.t
 
-  
+ 
 
 
 
@@ -22,17 +23,16 @@ Stop_dead_link_doc
 ###### &nbsp; type bar = 
 
 <a id="type-bar.Bar"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Bar of {
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Bar of {
 
 <a id="type-bar.field"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` field : Foo.t;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` field : Foo.t; `` 
 
-  
+ 
 
 }
 
-  
+ 
 
 
 
@@ -42,9 +42,9 @@ Stop_dead_link_doc
 ###### &nbsp; type foo_ = 
 
 <a id="type-foo_.Bar_"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Bar_ of int * Foo.t * int
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Bar_ of int * Foo.t * int
 
-  
+ 
 
 
 
@@ -54,9 +54,9 @@ Stop_dead_link_doc
 ###### &nbsp; type bar_ = 
 
 <a id="type-bar_.Bar__"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Bar__ of Foo.t option
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Bar__ of Foo.t option
 
-  
+ 
 
 
 
@@ -83,7 +83,7 @@ Stop_dead_link_doc
 
 Stop_dead_link_docFoo
 
- Module `` Stop_dead_link_doc.Foo`` 
+ Module  `` Stop_dead_link_doc.Foo `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

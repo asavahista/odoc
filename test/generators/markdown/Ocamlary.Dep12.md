@@ -1,6 +1,6 @@
 OcamlaryDep12
 
- Module `` Ocamlary.Dep12`` 
+ Module  `` Ocamlary.Dep12 `` 
 
 # Parameters
 
@@ -9,10 +9,11 @@ OcamlaryDep12
 ###### &nbsp; module Arg : sig
 
 <a id="module-type-S"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type S
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -26,7 +27,7 @@ end
 
 OcamlaryDep121-Arg
 
- Parameter `` Dep12.1-Arg`` 
+ Parameter  `` Dep12.1-Arg `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S
 

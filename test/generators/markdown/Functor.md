@@ -1,14 +1,15 @@
 Functor
 
- Module `` Functor`` 
+ Module  `` Functor `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -17,28 +18,32 @@ end
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-_"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module _ : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module _ : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -53,7 +58,8 @@ end
 
 
 <a id="module-F3"></a>
-###### &nbsp; module F3 (Arg : S) : sig ... end
+###### &nbsp; module F3 (Arg : S) : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -68,14 +74,14 @@ end
 
 FunctorS
 
- Module type `` Functor.S`` 
+ Module type  `` Functor.S `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorS1
 
- Module type `` Functor.S1`` 
+ Module type  `` Functor.S1 `` 
 
 # Parameters
 
@@ -84,10 +90,11 @@ FunctorS1
 ###### &nbsp; module _ : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -101,14 +108,14 @@ end
 
 FunctorS11-_
 
- Parameter `` S1.1-_`` 
+ Parameter  `` S1.1-_ `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorF1
 
- Module `` Functor.F1`` 
+ Module  `` Functor.F1 `` 
 
 # Parameters
 
@@ -117,10 +124,11 @@ FunctorF1
 ###### &nbsp; module Arg : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -134,14 +142,14 @@ end
 
 FunctorF11-Arg
 
- Parameter `` F1.1-Arg`` 
+ Parameter  `` F1.1-Arg `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorF2
 
- Module `` Functor.F2`` 
+ Module  `` Functor.F2 `` 
 
 # Parameters
 
@@ -150,10 +158,11 @@ FunctorF2
 ###### &nbsp; module Arg : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -167,14 +176,14 @@ end
 
 FunctorF21-Arg
 
- Parameter `` F2.1-Arg`` 
+ Parameter  `` F2.1-Arg `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorF3
 
- Module `` Functor.F3`` 
+ Module  `` Functor.F3 `` 
 
 # Parameters
 
@@ -183,10 +192,11 @@ FunctorF3
 ###### &nbsp; module Arg : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -200,14 +210,14 @@ end
 
 FunctorF31-Arg
 
- Parameter `` F3.1-Arg`` 
+ Parameter  `` F3.1-Arg `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorF4
 
- Module `` Functor.F4`` 
+ Module  `` Functor.F4 `` 
 
 # Parameters
 
@@ -216,10 +226,11 @@ FunctorF4
 ###### &nbsp; module Arg : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -233,14 +244,14 @@ end
 
 FunctorF41-Arg
 
- Parameter `` F4.1-Arg`` 
+ Parameter  `` F4.1-Arg `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 FunctorF5
 
- Module `` Functor.F5`` 
+ Module  `` Functor.F5 `` 
 
 # Parameters
 

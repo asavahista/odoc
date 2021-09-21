@@ -1,13 +1,14 @@
 Alias
 
- Module `` Alias`` 
+ Module  `` Alias `` 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... end
+###### &nbsp; module X : sig ... 
+ ###### &nbsp; end
 
 
 AliasX
 
- Module `` Alias.X`` 
+ Module  `` Alias.X `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = int
 

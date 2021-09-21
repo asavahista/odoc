@@ -1,13 +1,15 @@
 Recent_impl
 
- Module `` Recent_impl`` 
+ Module  `` Recent_impl `` 
 <a id="module-Foo"></a>
-###### &nbsp; module Foo : sig ... end
+###### &nbsp; module Foo : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-B"></a>
-###### &nbsp; module B : sig ... end
+###### &nbsp; module B : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -20,41 +22,47 @@ Recent_impl
 ###### &nbsp; module type S = sig
 
 <a id="module-F"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module F : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module F : sig
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-_"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module _ : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module _ : sig
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-X"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module X : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module X : sig
+
+ ###### &nbsp; end
 
 
 
 <a id="val-f"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val f : F(X).t
+###### &nbsp; &nbsp; &nbsp; &nbsp; val f : F(X).t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -64,89 +72,96 @@ end
 
 Recent_implFoo
 
- Module `` Recent_impl.Foo`` 
+ Module  `` Recent_impl.Foo `` 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... end
+###### &nbsp; module A : sig ... 
+ ###### &nbsp; end
 
 
 
 <a id="module-B"></a>
-###### &nbsp; module B : sig ... end
+###### &nbsp; module B : sig ... 
+ ###### &nbsp; end
 
 
 Recent_implFooA
 
- Module `` Foo.A`` 
+ Module  `` Foo.A `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = 
 
 <a id="type-t.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A
 
-  
+ 
 
 
 
 
 Recent_implFooB
 
- Module `` Foo.B`` 
+ Module  `` Foo.B `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = 
 
 <a id="type-t.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| B
+###### &nbsp; &nbsp; &nbsp; &nbsp; | B
 
-  
+ 
 
 
 
 
 Recent_implB
 
- Module `` Recent_impl.B`` 
+ Module  `` Recent_impl.B `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = 
 
 <a id="type-t.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| B
+###### &nbsp; &nbsp; &nbsp; &nbsp; | B
 
-  
+ 
 
 
 
 
 Recent_implS
 
- Module type `` Recent_impl.S`` 
+ Module type  `` Recent_impl.S `` 
 <a id="module-F"></a>
 ###### &nbsp; module F : sig
 
 
 ## Parameters
+---
 
 
 <a id="argument-1-_"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module _ : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module _ : sig
+
+ ###### &nbsp; end
 
 
 
 
 ## Signature
+---
 
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-X"></a>
 ###### &nbsp; module X : sig
-end
+
+ ###### &nbsp; end
 
 
 
@@ -156,14 +171,15 @@ end
 
 Recent_implSF
 
- Module `` S.F`` 
+ Module  `` S.F `` 
 
 # Parameters
 
 
 <a id="argument-1-_"></a>
 ###### &nbsp; module _ : sig
-end
+
+ ###### &nbsp; end
 
 
 
@@ -177,8 +193,8 @@ end
 
 Recent_implSF1-_
 
- Parameter `` F.1-_`` 
+ Parameter  `` F.1-_ `` 
 
 Recent_implSX
 
- Module `` S.X`` 
+ Module  `` S.X `` 

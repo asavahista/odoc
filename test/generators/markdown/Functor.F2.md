@@ -1,6 +1,6 @@
 FunctorF2
 
- Module `` Functor.F2`` 
+ Module  `` Functor.F2 `` 
 
 # Parameters
 
@@ -9,10 +9,11 @@ FunctorF2
 ###### &nbsp; module Arg : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -26,7 +27,7 @@ end
 
 FunctorF21-Arg
 
- Parameter `` F2.1-Arg`` 
+ Parameter  `` F2.1-Arg `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

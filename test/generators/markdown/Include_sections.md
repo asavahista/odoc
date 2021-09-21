@@ -1,16 +1,17 @@
 Include_sections
 
- Module `` Include_sections`` 
+ Module  `` Include_sections `` 
 <a id="module-type-Something"></a>
 ###### &nbsp; module type Something = sig
 
 <a id="val-something"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val something : unit
+###### &nbsp; &nbsp; &nbsp; &nbsp; val something : unit
 
 
 
 
 ## Something 1
+---
 
 
 foo
@@ -18,16 +19,17 @@ foo
 
 
 <a id="val-foo"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val foo : unit
+###### &nbsp; &nbsp; &nbsp; &nbsp; val foo : unit
 
 
 
 
 ### Something 2
+---
 
 
 <a id="val-bar"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;val bar : unit
+###### &nbsp; &nbsp; &nbsp; &nbsp; val bar : unit
 
 foo bar
 
@@ -36,20 +38,21 @@ foo bar
 
 
 ## Something 1-bis
+---
 
 
 Some text.
 
 
-end
+
+ ###### &nbsp; end
 
 A module type.
 
 
 
 
-Let's include `` Something
-``  once
+Let's include  `` Something ``  once
 
 
 
@@ -63,6 +66,7 @@ foo
 
 
 ## Something 2
+---
 
 
 
@@ -77,13 +81,13 @@ Some text.
 # Second include
 
 
-Let's include `` Something
-``  a second time: the heading level should be shift here.
+Let's include  `` Something ``  a second time: the heading level should be shift here.
 
 
 
 
 ## Something 1
+---
 
 
 foo
@@ -92,10 +96,12 @@ foo
 
 
 ### Something 2
+---
 
 
 
 ## Something 1-bis
+---
 
 
 Some text.
@@ -104,6 +110,7 @@ Some text.
 
 
 ## Third include
+---
 
 
 Shifted some more.
@@ -112,6 +119,7 @@ Shifted some more.
 
 
 ### Something 1
+---
 
 
 foo
@@ -120,10 +128,12 @@ foo
 
 
 #### Something 2
+---
 
 
 
 ### Something 1-bis
+---
 
 
 Some text.
@@ -141,6 +151,7 @@ And let's include it again, but without inlining it this time: the ToC shouldn't
 
 
 ### Something 1
+---
 
 
 foo
@@ -154,6 +165,7 @@ foo
 
 
 #### Something 2
+---
 
 
 <a id="val-bar"></a>
@@ -166,6 +178,7 @@ foo bar
 
 
 ### Something 1-bis
+---
 
 
 Some text.
@@ -173,7 +186,7 @@ Some text.
 
 Include_sectionsSomething
 
- Module type `` Include_sections.Something`` 
+ Module type  `` Include_sections.Something `` 
 
 
 A module type.
@@ -198,6 +211,7 @@ foo
 
 
 ## Something 2
+---
 
 
 <a id="val-bar"></a>

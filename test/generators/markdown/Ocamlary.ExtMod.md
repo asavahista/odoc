@@ -1,6 +1,6 @@
 OcamlaryExtMod
 
- Module `` Ocamlary.ExtMod`` 
+ Module  `` Ocamlary.ExtMod `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = ..
 
@@ -10,9 +10,9 @@ OcamlaryExtMod
 ###### &nbsp; type t += 
 
 <a id="extension-Leisureforce"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Leisureforce
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Leisureforce
 
-  
+ 
 
 
 

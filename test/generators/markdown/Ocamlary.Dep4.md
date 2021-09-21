@@ -1,14 +1,15 @@
 OcamlaryDep4
 
- Module `` Ocamlary.Dep4`` 
+ Module  `` Ocamlary.Dep4 `` 
 <a id="module-type-T"></a>
 ###### &nbsp; module type T = sig
 
 <a id="type-b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type b
+###### &nbsp; &nbsp; &nbsp; &nbsp; type b
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -16,22 +17,25 @@ end
 ###### &nbsp; module type S = sig
 
 <a id="module-X"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module X : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module X : sig
 
 <a id="type-b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;type b
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type b
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Y : sig
-end
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Y : sig
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -41,44 +45,46 @@ end
 
 OcamlaryDep4T
 
- Module type `` Dep4.T`` 
+ Module type  `` Dep4.T `` 
 <a id="type-b"></a>
 ###### &nbsp; type b
 
 
 OcamlaryDep4S
 
- Module type `` Dep4.S`` 
+ Module type  `` Dep4.S `` 
 <a id="module-X"></a>
 ###### &nbsp; module X : sig
 
 <a id="type-b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type b
+###### &nbsp; &nbsp; &nbsp; &nbsp; type b
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-Y"></a>
 ###### &nbsp; module Y : sig
-end
+
+ ###### &nbsp; end
 
 
 OcamlaryDep4SX
 
- Module `` S.X`` 
+ Module  `` S.X `` 
 <a id="type-b"></a>
 ###### &nbsp; type b
 
 
 OcamlaryDep4SY
 
- Module `` S.Y`` 
+ Module  `` S.Y `` 
 
 OcamlaryDep4X
 
- Module `` Dep4.X`` 
+ Module  `` Dep4.X `` 
 <a id="type-b"></a>
 ###### &nbsp; type b
 

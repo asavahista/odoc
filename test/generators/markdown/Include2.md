@@ -1,8 +1,9 @@
 Include2
 
- Module `` Include2`` 
+ Module  `` Include2 `` 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... end
+###### &nbsp; module X : sig ... 
+ ###### &nbsp; end
 
 Comment about X that should not appear when including X below.
 
@@ -19,7 +20,8 @@ Comment about X that should not appear when including X below.
 
 
 <a id="module-Y"></a>
-###### &nbsp; module Y : sig ... end
+###### &nbsp; module Y : sig ... 
+ ###### &nbsp; end
 
 Top-comment of Y.
 
@@ -27,21 +29,22 @@ Top-comment of Y.
 
 
 <a id="module-Y_include_synopsis"></a>
-###### &nbsp; module Y_include_synopsis : sig ... end
+###### &nbsp; module Y_include_synopsis : sig ... 
+ ###### &nbsp; end
 
-The `` include Y``  below should have the synopsis from `` Y
-`` 's top-comment attached to it.
+The  `` include Y ``  below should have the synopsis from  `` Y `` 's top-comment attached to it.
 
 
 
 
 <a id="module-Y_include_doc"></a>
-###### &nbsp; module Y_include_doc : sig ... end
+###### &nbsp; module Y_include_doc : sig ... 
+ ###### &nbsp; end
 
 
 Include2X
 
- Module `` Include2.X`` 
+ Module  `` Include2.X `` 
 
 
 Comment about X that should not appear when including X below.
@@ -52,7 +55,7 @@ Comment about X that should not appear when including X below.
 
 Include2Y
 
- Module `` Include2.Y`` 
+ Module  `` Include2.Y `` 
 
 
 Top-comment of Y.
@@ -63,11 +66,10 @@ Top-comment of Y.
 
 Include2Y_include_synopsis
 
- Module `` Include2.Y_include_synopsis`` 
+ Module  `` Include2.Y_include_synopsis `` 
 
 
-The `` include Y``  below should have the synopsis from `` Y
-`` 's top-comment attached to it.
+The  `` include Y ``  below should have the synopsis from  `` Y `` 's top-comment attached to it.
 
 <a id="type-t"></a>
 ###### &nbsp; type t = Y.t
@@ -75,7 +77,7 @@ The `` include Y``  below should have the synopsis from `` Y
 
 Include2Y_include_doc
 
- Module `` Include2.Y_include_doc`` 
+ Module  `` Include2.Y_include_doc `` 
 <a id="type-t"></a>
 ###### &nbsp; type t = Y.t
 

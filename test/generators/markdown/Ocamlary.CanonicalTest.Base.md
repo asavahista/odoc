@@ -1,13 +1,14 @@
 OcamlaryCanonicalTestBase
 
- Module `` CanonicalTest.Base`` 
+ Module  `` CanonicalTest.Base `` 
 <a id="module-List"></a>
-###### &nbsp; module List : sig ... end
+###### &nbsp; module List : sig ... 
+ ###### &nbsp; end
 
 
 OcamlaryCanonicalTestBaseList
 
- Module `` Base.List`` 
+ Module  `` Base.List `` 
 <a id="type-t"></a>
 ###### &nbsp; type 'a t
 

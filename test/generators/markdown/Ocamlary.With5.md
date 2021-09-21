@@ -1,14 +1,15 @@
 OcamlaryWith5
 
- Module `` Ocamlary.With5`` 
+ Module  `` Ocamlary.With5 `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -18,14 +19,14 @@ end
 
 OcamlaryWith5S
 
- Module type `` With5.S`` 
+ Module type  `` With5.S `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 
 
 OcamlaryWith5N
 
- Module `` With5.N`` 
+ Module  `` With5.N `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

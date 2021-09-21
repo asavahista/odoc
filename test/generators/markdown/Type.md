@@ -1,6 +1,6 @@
 Type
 
- Module `` Type`` 
+ Module  `` Type `` 
 <a id="type-abstract"></a>
 ###### &nbsp; type abstract
 
@@ -83,10 +83,9 @@ Some _documentation_.
 ###### &nbsp; type variant_e = {
 
 <a id="type-variant_e.a"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` a : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` a : int; `` 
 
-  
+ 
 
 }
 
@@ -96,41 +95,41 @@ Some _documentation_.
 ###### &nbsp; type variant = 
 
 <a id="type-variant.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A
 
-  
+ 
 
 
 
 <a id="type-variant.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| B of int
+###### &nbsp; &nbsp; &nbsp; &nbsp; | B of int
 
-  
+ 
 
 
 
 <a id="type-variant.C"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| C
+###### &nbsp; &nbsp; &nbsp; &nbsp; | C
 
-  foo
+ foo
 
 
 
 
 
 <a id="type-variant.D"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| D
+###### &nbsp; &nbsp; &nbsp; &nbsp; | D
 
-  _bar_
+ _bar_
 
 
 
 
 
 <a id="type-variant.E"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| E of variant_e
+###### &nbsp; &nbsp; &nbsp; &nbsp; | E of variant_e
 
-  
+ 
 
 
 
@@ -140,10 +139,9 @@ Some _documentation_.
 ###### &nbsp; type variant_c = {
 
 <a id="type-variant_c.a"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` a : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` a : int; `` 
 
-  
+ 
 
 }
 
@@ -153,23 +151,23 @@ Some _documentation_.
 ###### &nbsp; type _ gadt = 
 
 <a id="type-gadt.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A : int gadt
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A : int gadt
 
-  
+ 
 
 
 
 <a id="type-gadt.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| B : int -> string gadt
+###### &nbsp; &nbsp; &nbsp; &nbsp; | B : int -> string gadt
 
-  
+ 
 
 
 
 <a id="type-gadt.C"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| C : variant_c -> unit gadt
+###### &nbsp; &nbsp; &nbsp; &nbsp; | C : variant_c -> unit gadt
 
-  
+ 
 
 
 
@@ -179,9 +177,9 @@ Some _documentation_.
 ###### &nbsp; type degenerate_gadt = 
 
 <a id="type-degenerate_gadt.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A : degenerate_gadt
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A : degenerate_gadt
 
-  
+ 
 
 
 
@@ -191,9 +189,9 @@ Some _documentation_.
 ###### &nbsp; type private_variant = private 
 
 <a id="type-private_variant.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A
 
-  
+ 
 
 
 
@@ -203,46 +201,41 @@ Some _documentation_.
 ###### &nbsp; type record = {
 
 <a id="type-record.a"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` a : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` a : int; `` 
 
-  
+ 
 
 
 
 <a id="type-record.b"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` mutable b : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` mutable b : int; `` 
 
-  
+ 
 
 
 
 <a id="type-record.c"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` c : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` c : int; `` 
 
-  foo
+ foo
 
 
 
 
 
 <a id="type-record.d"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` d : int;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` d : int; `` 
 
-  _bar_
+ _bar_
 
 
 
 
 
 <a id="type-record.e"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` e : a. 'a;
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` e : a. 'a; `` 
 
-  
+ 
 
 }
 
@@ -252,34 +245,30 @@ Some _documentation_.
 ###### &nbsp; type polymorphic_variant = [ 
 
 <a id="type-polymorphic_variant.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `A
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A `` 
 
-  
+ 
 
 
 
 <a id="type-polymorphic_variant.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `B of int
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `B of int `` 
 
-  
+ 
 
 
 
 <a id="type-polymorphic_variant.C"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `C of int * unit
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `C of int * unit `` 
 
-  
+ 
 
 
 
 <a id="type-polymorphic_variant.D"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `D
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `D `` 
 
-  
+ 
 
  ]
 
@@ -289,18 +278,16 @@ Some _documentation_.
 ###### &nbsp; type polymorphic_variant_extension = [ 
 
 <a id="type-polymorphic_variant_extension.polymorphic_variant"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` polymorphic_variant
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` polymorphic_variant `` 
 
-  
+ 
 
 
 
 <a id="type-polymorphic_variant_extension.E"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `E
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `E `` 
 
-  
+ 
 
  ]
 
@@ -310,10 +297,9 @@ Some _documentation_.
 ###### &nbsp; type nested_polymorphic_variant = [ 
 
 <a id="type-nested_polymorphic_variant.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` `A of [ `B | `C ]
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A of [ `B | `C ] `` 
 
-  
+ 
 
  ]
 
@@ -328,10 +314,9 @@ Some _documentation_.
 ###### &nbsp; and private_extenion = private [> 
 
 <a id="type-private_extenion.polymorphic_variant"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;`` | `` `` polymorphic_variant
-`` 
+###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` polymorphic_variant `` 
 
-  
+ 
 
  ]
 
@@ -346,15 +331,16 @@ Some _documentation_.
 ###### &nbsp; module type X = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type t
+###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;type u
+###### &nbsp; &nbsp; &nbsp; &nbsp; type u
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -462,20 +448,18 @@ end
 ###### &nbsp; type extensible += 
 
 <a id="extension-Extension"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Extension
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Extension
 
-  Documentation for `` Extension
-`` .
+ Documentation for  `` Extension `` .
 
 
 
 
 
 <a id="extension-Another_extension"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| Another_extension
+###### &nbsp; &nbsp; &nbsp; &nbsp; | Another_extension
 
-  Documentation for `` Another_extension
-`` .
+ Documentation for  `` Another_extension `` .
 
 
 
@@ -487,9 +471,9 @@ end
 ###### &nbsp; type mutually = 
 
 <a id="type-mutually.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| A of recursive
+###### &nbsp; &nbsp; &nbsp; &nbsp; | A of recursive
 
-  
+ 
 
 
 
@@ -499,9 +483,9 @@ end
 ###### &nbsp; and recursive = 
 
 <a id="type-recursive.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;| B of mutually
+###### &nbsp; &nbsp; &nbsp; &nbsp; | B of mutually
 
-  
+ 
 
 
 
@@ -513,7 +497,7 @@ end
 
 TypeX
 
- Module type `` Type.X`` 
+ Module type  `` Type.X `` 
 <a id="type-t"></a>
 ###### &nbsp; type t
 

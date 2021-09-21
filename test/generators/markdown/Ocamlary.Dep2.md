@@ -1,6 +1,6 @@
 OcamlaryDep2
 
- Module `` Ocamlary.Dep2`` 
+ Module  `` Ocamlary.Dep2 `` 
 
 # Parameters
 
@@ -9,21 +9,23 @@ OcamlaryDep2
 ###### &nbsp; module Arg : sig
 
 <a id="module-type-S"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type S
 
 
 
 <a id="module-X"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module X : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module X : sig
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module Y : S
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module Y : S
 
 
-end
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -32,7 +34,8 @@ end
 
 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... end
+###### &nbsp; module A : sig ... 
+ ###### &nbsp; end
 
 
 
@@ -42,7 +45,7 @@ end
 
 OcamlaryDep21-Arg
 
- Parameter `` Dep2.1-Arg`` 
+ Parameter  `` Dep2.1-Arg `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S
 
@@ -52,22 +55,23 @@ OcamlaryDep21-Arg
 ###### &nbsp; module X : sig
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Y : S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Y : S
 
 
-end
+
+ ###### &nbsp; end
 
 
 OcamlaryDep21-ArgX
 
- Module `` 1-Arg.X`` 
+ Module  `` 1-Arg.X `` 
 <a id="module-Y"></a>
 ###### &nbsp; module Y : S
 
 
 OcamlaryDep2A
 
- Module `` Dep2.A`` 
+ Module  `` Dep2.A `` 
 <a id="module-Y"></a>
 ###### &nbsp; module Y : Arg.S
 

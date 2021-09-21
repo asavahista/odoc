@@ -1,6 +1,6 @@
 OcamlaryDep6X
 
- Module `` Dep6.X`` 
+ Module  `` Dep6.X `` 
 <a id="module-type-R"></a>
 ###### &nbsp; module type R = S
 
@@ -12,7 +12,7 @@ OcamlaryDep6X
 
 OcamlaryDep6XY
 
- Module `` X.Y`` 
+ Module  `` X.Y `` 
 <a id="type-d"></a>
 ###### &nbsp; type d
 

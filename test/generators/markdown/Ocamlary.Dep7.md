@@ -1,6 +1,6 @@
 OcamlaryDep7
 
- Module `` Ocamlary.Dep7`` 
+ Module  `` Ocamlary.Dep7 `` 
 
 # Parameters
 
@@ -9,42 +9,45 @@ OcamlaryDep7
 ###### &nbsp; module Arg : sig
 
 <a id="module-type-S"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type S
 
 
 
 <a id="module-type-T"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type T = sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type T = sig
 
 <a id="module-type-R"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module type R = S
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module type R = S
 
 
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module Y : R
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module Y : R
 
 
-end
+
+ ###### &nbsp; end
 
 
 
 <a id="module-X"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module X : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; module X : sig
 
 <a id="module-type-R"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module type R = S
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module type R = S
 
 
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;module Y : R
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module Y : R
 
 
-end
+
+ ###### &nbsp; end
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -58,7 +61,7 @@ end
 
 OcamlaryDep71-Arg
 
- Parameter `` Dep7.1-Arg`` 
+ Parameter  `` Dep7.1-Arg `` 
 <a id="module-type-S"></a>
 ###### &nbsp; module type S
 
@@ -68,15 +71,16 @@ OcamlaryDep71-Arg
 ###### &nbsp; module type T = sig
 
 <a id="module-type-R"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type R = S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type R = S
 
 
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Y : R
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Y : R
 
 
-end
+
+ ###### &nbsp; end
 
 
 
@@ -84,20 +88,21 @@ end
 ###### &nbsp; module X : sig
 
 <a id="module-type-R"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module type R = S
+###### &nbsp; &nbsp; &nbsp; &nbsp; module type R = S
 
 
 
 <a id="module-Y"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp;module Y : R
+###### &nbsp; &nbsp; &nbsp; &nbsp; module Y : R
 
 
-end
+
+ ###### &nbsp; end
 
 
 OcamlaryDep71-ArgT
 
- Module type `` 1-Arg.T`` 
+ Module type  `` 1-Arg.T `` 
 <a id="module-type-R"></a>
 ###### &nbsp; module type R = S
 
@@ -109,7 +114,7 @@ OcamlaryDep71-ArgT
 
 OcamlaryDep71-ArgX
 
- Module `` 1-Arg.X`` 
+ Module  `` 1-Arg.X `` 
 <a id="module-type-R"></a>
 ###### &nbsp; module type R = S
 
@@ -121,7 +126,7 @@ OcamlaryDep71-ArgX
 
 OcamlaryDep7M
 
- Module `` Dep7.M`` 
+ Module  `` Dep7.M `` 
 <a id="module-type-R"></a>
 ###### &nbsp; module type R = Arg.S
 
