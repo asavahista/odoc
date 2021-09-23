@@ -2,32 +2,32 @@ FunctorF2
 
  Module  `` Functor.F2 `` 
 
-# Parameters
+#:parameters  Parameters
 
 
 <a id="argument-1-Arg"></a>
-###### &nbsp; module Arg : sig
+###### module Arg : sig
 
 <a id="type-t"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; type t
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 
-# Signature
+#:signature  Signature
 
 
 <a id="type-t"></a>
-###### &nbsp; type t = Arg.t
+###### type t = Arg.t
 
 
 FunctorF21-Arg
 
  Parameter  `` F2.1-Arg `` 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 

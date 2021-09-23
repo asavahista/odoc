@@ -6,7 +6,7 @@ Stop
 This test cases exercises stop comments.
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : int
+###### val foo : int
 
 This is normal commented text.
 
@@ -25,18 +25,18 @@ Now, we have a nested module, and it has a stop comment between its two items. W
 
 
 <a id="module-N"></a>
-###### &nbsp; module N : sig ... 
- ###### &nbsp; end
+###### module N : sig ... 
+###### end
 
 
 
 <a id="val-lol"></a>
-###### &nbsp; val lol : int
+###### val lol : int
 
 
 StopN
 
  Module  `` Stop.N `` 
 <a id="val-quux"></a>
-###### &nbsp; val quux : int
+###### val quux : int
 

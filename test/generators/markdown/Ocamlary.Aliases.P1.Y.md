@@ -2,10 +2,10 @@ OcamlaryAliasesP1Y
 
  Module  `` P1.Y `` 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 
 
 <a id="val-id"></a>
-###### &nbsp; val id : t -> t
+###### val id : t -> t
 

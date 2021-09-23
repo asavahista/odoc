@@ -2,7 +2,7 @@ Val
 
  Module  `` Val `` 
 <a id="val-documented"></a>
-###### &nbsp; val documented : unit
+###### val documented : unit
 
 Foo.
 
@@ -10,12 +10,12 @@ Foo.
 
 
 <a id="val-undocumented"></a>
-###### &nbsp; val undocumented : unit
+###### val undocumented : unit
 
 
 
 <a id="val-documented_above"></a>
-###### &nbsp; val documented_above : unit
+###### val documented_above : unit
 
 Bar.
 

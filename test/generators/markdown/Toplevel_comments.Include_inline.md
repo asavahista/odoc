@@ -6,5 +6,5 @@ Toplevel_commentsInclude_inline
 Doc of  `` T `` , part 2.
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 

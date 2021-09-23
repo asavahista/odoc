@@ -10,11 +10,11 @@ This is module X.
 Some additional comments.
 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -22,11 +22,11 @@ Some type.
 
 
 
-# Values
+#:values  Values
 
 
 <a id="val-x"></a>
-###### &nbsp; val x : t
+###### val x : t
 
 The value of x.
 

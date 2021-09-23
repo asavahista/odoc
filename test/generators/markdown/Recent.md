@@ -2,14 +2,14 @@ Recent
 
  Module  `` Recent `` 
 <a id="module-type-S"></a>
-###### &nbsp; module type S = sig
+###### module type S = sig
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="module-type-S1"></a>
-###### &nbsp; module type S1 = sig
+###### module type S1 = sig
 
 
 ## Parameters
@@ -19,7 +19,7 @@ Recent
 <a id="argument-1-_"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; module _ : sig
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; end
 
 
 
@@ -28,12 +28,12 @@ Recent
 ---
 
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="type-variant"></a>
-###### &nbsp; type variant = 
+###### type variant = 
 
 <a id="type-variant.A"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | A
@@ -84,7 +84,7 @@ Recent
 
 
 <a id="type-gadt"></a>
-###### &nbsp; type _ gadt = 
+###### type _ gadt = 
 
 <a id="type-gadt.A"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | A : int gadt
@@ -119,7 +119,7 @@ Recent
 
 
 <a id="type-polymorphic_variant"></a>
-###### &nbsp; type polymorphic_variant = [ 
+###### type polymorphic_variant = [ 
 
 <a id="type-polymorphic_variant.A"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A `` 
@@ -156,17 +156,17 @@ Recent
 
 
 <a id="type-empty_variant"></a>
-###### &nbsp; type empty_variant = |
+###### type empty_variant = |
 
 
 
 <a id="type-nonrec_"></a>
-###### &nbsp; type nonrec nonrec_ = int
+###### type nonrec nonrec_ = int
 
 
 
 <a id="type-empty_conj"></a>
-###### &nbsp; type empty_conj = 
+###### type empty_conj = 
 
 <a id="type-empty_conj.X"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | X : [< `X of & 'a & int * float ] -> empty_conj
@@ -178,7 +178,7 @@ Recent
 
 
 <a id="type-conj"></a>
-###### &nbsp; type conj = 
+###### type conj = 
 
 <a id="type-conj.X"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | X : [< `X of int & [< `B of int & float ] ] -> conj
@@ -190,42 +190,42 @@ Recent
 
 
 <a id="val-empty_conj"></a>
-###### &nbsp; val empty_conj : [< `X of & 'a & int * float ]
+###### val empty_conj : [< `X of & 'a & int * float ]
 
 
 
 <a id="val-conj"></a>
-###### &nbsp; val conj : [< `X of int & [< `B of int & float ] ]
+###### val conj : [< `X of int & [< `B of int & float ] ]
 
 
 
 <a id="module-Z"></a>
-###### &nbsp; module Z : sig ... 
- ###### &nbsp; end
+###### module Z : sig ... 
+###### end
 
 
 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... 
- ###### &nbsp; end
+###### module X : sig ... 
+###### end
 
 
 
 <a id="module-type-PolyS"></a>
-###### &nbsp; module type PolyS = sig
+###### module type PolyS = sig
 
 <a id="type-t"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; type t = [ 
 
 <a id="type-t.A"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A `` 
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A `` 
 
  
 
 
 
 <a id="type-t.B"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `B `` 
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `B `` 
 
  
 
@@ -233,7 +233,7 @@ Recent
 
 
 
- ###### &nbsp; end
+###### end
 
 
 RecentS
@@ -244,18 +244,18 @@ RecentS1
 
  Module type  `` Recent.S1 `` 
 
-# Parameters
+#:parameters  Parameters
 
 
 <a id="argument-1-_"></a>
-###### &nbsp; module _ : sig
+###### module _ : sig
 
- ###### &nbsp; end
-
-
+###### end
 
 
-# Signature
+
+
+#:signature  Signature
 
 RecentS11-_
 
@@ -265,52 +265,52 @@ RecentZ
 
  Module  `` Recent.Z `` 
 <a id="module-Y"></a>
-###### &nbsp; module Y : sig ... 
- ###### &nbsp; end
+###### module Y : sig ... 
+###### end
 
 
 RecentZY
 
  Module  `` Z.Y `` 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... 
- ###### &nbsp; end
+###### module X : sig ... 
+###### end
 
 
 RecentZYX
 
  Module  `` Y.X `` 
 <a id="type-t"></a>
-###### &nbsp; type 'a t
+###### type 'a t
 
 
 RecentX
 
  Module  `` Recent.X `` 
 <a id="module-L"></a>
-###### &nbsp; module L := Z.Y
+###### module L := Z.Y
 
 
 
 <a id="type-t"></a>
-###### &nbsp; type t = int Z.Y.X.t
+###### type t = int Z.Y.X.t
 
 
 
 <a id="type-u"></a>
-###### &nbsp; type u := int
+###### type u := int
 
 
 
 <a id="type-v"></a>
-###### &nbsp; type v = u Z.Y.X.t
+###### type v = u Z.Y.X.t
 
 
 RecentPolyS
 
  Module type  `` Recent.PolyS `` 
 <a id="type-t"></a>
-###### &nbsp; type t = [ 
+###### type t = [ 
 
 <a id="type-t.A"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp;  `` |  ``  `` `A `` 

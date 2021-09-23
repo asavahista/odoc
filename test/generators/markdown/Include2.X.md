@@ -6,5 +6,5 @@ Include2X
 Comment about X that should not appear when including X below.
 
 <a id="type-t"></a>
-###### &nbsp; type t = int
+###### type t = int
 

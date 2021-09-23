@@ -10,7 +10,7 @@ Some separate stray text at the top of the module.
 
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : unit
+###### val foo : unit
 
 Foo.
 
@@ -29,7 +29,7 @@ A separate block of stray text, adjacent to the preceding one.
 
 
 <a id="val-bar"></a>
-###### &nbsp; val bar : unit
+###### val bar : unit
 
 Bar.
 
@@ -37,17 +37,17 @@ Bar.
 
 
 <a id="val-multiple"></a>
-###### &nbsp; val multiple : unit
+###### val multiple : unit
 
 
 
 <a id="val-signature"></a>
-###### &nbsp; val signature : unit
+###### val signature : unit
 
 
 
 <a id="val-items"></a>
-###### &nbsp; val items : unit
+###### val items : unit
 
 
 

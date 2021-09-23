@@ -10,5 +10,5 @@ Toplevel_commentsRef_in_synopsis
 This reference should resolve in the context of this module, even when used as a synopsis.
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 

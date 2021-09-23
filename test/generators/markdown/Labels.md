@@ -2,21 +2,21 @@ Labels
 
  Module  `` Labels `` 
 
-# Attached to unit
+#:L1  Attached to unit
 
 
 
-# Attached to nothing
+#:L2  Attached to nothing
 
 
 <a id="module-A"></a>
-###### &nbsp; module A : sig ... 
- ###### &nbsp; end
+###### module A : sig ... 
+###### end
 
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Attached to type
 
@@ -24,7 +24,7 @@ Attached to type
 
 
 <a id="val-f"></a>
-###### &nbsp; val f : t
+###### val f : t
 
 Attached to value
 
@@ -32,7 +32,7 @@ Attached to value
 
 
 <a id="val-e"></a>
-###### &nbsp; val e : unit -> t
+###### val e : unit -> t
 
 Attached to external
 
@@ -40,37 +40,37 @@ Attached to external
 
 
 <a id="module-type-S"></a>
-###### &nbsp; module type S = sig
+###### module type S = sig
 
 
 ### Attached to module type
 ---
 
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-c"></a>
-###### &nbsp; class  c : object ... 
- ###### &nbsp; end
+###### class  c : object ... 
+###### end
 
 
 
 <a id="class-type-cs"></a>
-###### &nbsp; class type  cs = object
+###### class type  cs = object
 
 
 ### Attached to class type
 ---
 
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="exception-E"></a>
-###### &nbsp; exception E
+###### exception E
 
 Attached to exception
 
@@ -78,12 +78,12 @@ Attached to exception
 
 
 <a id="type-x"></a>
-###### &nbsp; type x = ..
+###### type x = ..
 
 
 
 <a id="extension-decl-X"></a>
-###### &nbsp; type x += 
+###### type x += 
 
 <a id="extension-X"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | X
@@ -98,7 +98,7 @@ Attached to extension
 
 
 <a id="module-S"></a>
-###### &nbsp; module S := A
+###### module S := A
 
 Attached to module subst
 
@@ -106,7 +106,7 @@ Attached to module subst
 
 
 <a id="type-s"></a>
-###### &nbsp; type s := t
+###### type s := t
 
 Attached to type subst
 
@@ -114,7 +114,7 @@ Attached to type subst
 
 
 <a id="type-u"></a>
-###### &nbsp; type u = 
+###### type u = 
 
 <a id="type-u.A'"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; | A'
@@ -128,7 +128,7 @@ Attached to type subst
 
 
 <a id="type-v"></a>
-###### &nbsp; type v = {
+###### type v = {
 
 <a id="type-v.f"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp;  `` f : t; `` 
@@ -174,22 +174,22 @@ LabelsA
 
  Module  `` Labels.A `` 
 
-# Attached to module
+#:L3  Attached to module
 
 LabelsS
 
  Module type  `` Labels.S `` 
 
-# Attached to module type
+#:L6  Attached to module type
 
 Labelsc
 
  Class  `` Labels.c `` 
 
-# Attached to class
+#:L6  Attached to class
 
 Labelscs
 
  Class type  `` Labels.cs `` 
 
-# Attached to class type
+#:L7  Attached to class type

@@ -6,5 +6,5 @@ Include2Y
 Top-comment of Y.
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 

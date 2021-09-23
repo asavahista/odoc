@@ -2,7 +2,7 @@ Include_sections
 
  Module  `` Include_sections `` 
 <a id="module-type-Something"></a>
-###### &nbsp; module type Something = sig
+###### module type Something = sig
 
 <a id="val-something"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; val something : unit
@@ -45,7 +45,7 @@ Some text.
 
 
 
- ###### &nbsp; end
+###### end
 
 A module type.
 
@@ -57,7 +57,7 @@ Let's include  `` Something ``  once
 
 
 
-# Something 1
+#:something-1  Something 1
 
 
 foo
@@ -70,7 +70,7 @@ foo
 
 
 
-# Something 1-bis
+#:something-1-bis  Something 1-bis
 
 
 Some text.
@@ -78,7 +78,7 @@ Some text.
 
 
 
-# Second include
+#:second-include  Second include
 
 
 Let's include  `` Something ``  a second time: the heading level should be shift here.
@@ -145,7 +145,7 @@ And let's include it again, but without inlining it this time: the ToC shouldn't
 
 
 <a id="val-something"></a>
-###### &nbsp; val something : unit
+###### val something : unit
 
 
 
@@ -159,7 +159,7 @@ foo
 
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : unit
+###### val foo : unit
 
 
 
@@ -169,7 +169,7 @@ foo
 
 
 <a id="val-bar"></a>
-###### &nbsp; val bar : unit
+###### val bar : unit
 
 foo bar
 
@@ -192,12 +192,12 @@ Include_sectionsSomething
 A module type.
 
 <a id="val-something"></a>
-###### &nbsp; val something : unit
+###### val something : unit
 
 
 
 
-# Something 1
+#:something-1  Something 1
 
 
 foo
@@ -205,7 +205,7 @@ foo
 
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : unit
+###### val foo : unit
 
 
 
@@ -215,7 +215,7 @@ foo
 
 
 <a id="val-bar"></a>
-###### &nbsp; val bar : unit
+###### val bar : unit
 
 foo bar
 
@@ -223,7 +223,7 @@ foo bar
 
 
 
-# Something 1-bis
+#:something-1-bis  Something 1-bis
 
 
 Some text.

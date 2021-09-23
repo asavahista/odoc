@@ -6,7 +6,7 @@ Markup
 Here, we test the rendering of comment markup.
 
 
-# Sections
+#:sections  Sections
 
 
 Let's get these done first, because sections will be used to break up the rest of this test.
@@ -62,7 +62,7 @@ Parts of a longer paragraph that can be considered alone can also have headings.
 
 
 
-# Styling
+#:styling  Styling
 
 
 This paragraph has some styled elements: **bold** and _italic_, **_bold italic_**, _emphasis_, __emphasis_ within emphasis_, **_bold italic_**, super<sup>script, sub<sub>script. The line spacing should be enough for superscripts and subscripts not to look odd.
@@ -85,7 +85,7 @@ Code can appear **inside  `` other ``  markup**. Its display shouldn't be affect
 
 
 
-# Links and references
+#:links-and-references  Links and references
 
 
 This is a link. It sends you to the top of this page. Links can have markup inside them: **bold**, _italics_, _emphasis_, super<sup>script, sub<sub>script, and  `` code `` . Links can also be nested _inside_ markup. Links cannot be nested inside each other. This link has no replacement text: #. The text is filled in by odoc. This is a shorthand link: #. The text is also filled in by odoc in this case.
@@ -96,7 +96,7 @@ This is a reference to  `` foo `` . References can have replacement text: the va
 
 
 
-# Preformatted text
+#:preformatted-text  Preformatted text
 
 
 This is a code block:
@@ -112,10 +112,10 @@ let bar =
 There are also verbatim blocks:
 
 
-   The main difference is these don't get syntax highlighting.
+    The main difference is these don't get syntax highlighting.
 
 
-# Lists
+#:lists  Lists
 
 
 - This is a
@@ -159,7 +159,7 @@ can use explicitly-delimited lists.
 
 
 
-# Unicode
+#:unicode  Unicode
 
 
 The parser supports any ASCII-compatible encoding, in particuλar UTF-8.
@@ -167,7 +167,7 @@ The parser supports any ASCII-compatible encoding, in particuλar UTF-8.
 
 
 
-# Raw HTML
+#:raw-html  Raw HTML
 
 
 Raw HTML can be  as inline elements into sentences.
@@ -176,7 +176,7 @@ Raw HTML can be  as inline elements into sentences.
 
 
 
-# Modules
+#:modules  Modules
 
 
 
@@ -197,11 +197,10 @@ Raw HTML can be  as inline elements into sentences.
 
 
 
-# Tags
+#:tags  Tags
 
 
-Each comment can 
- ###### &nbsp; end with zero or more tags. Here are some examples:
+Each comment can end with zero or more tags. Here are some examples:
 
 
 
@@ -266,7 +265,7 @@ Each comment can
 
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : unit
+###### val foo : unit
 
 Comments in structure items **support** _markup_, t<sup>o<sub>o.
 

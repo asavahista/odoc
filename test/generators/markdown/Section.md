@@ -6,19 +6,11 @@ Section
 This is the module comment. Eventually, sections won't be allowed in it.
 
 
-# Empty section
+#:empty-section  Empty section
 
 
 
-# Text only
-
-
-Foo bar.
-
-
-
-
-# Aside only
+#:text-only  Text only
 
 
 Foo bar.
@@ -26,20 +18,28 @@ Foo bar.
 
 
 
-# Value only
+#:aside-only  Aside only
+
+
+Foo bar.
+
+
+
+
+#:value-only  Value only
 
 
 <a id="val-foo"></a>
-###### &nbsp; val foo : unit
+###### val foo : unit
 
 
 
 
-# Empty section
+#:empty-section  Empty section
 
 
 
-# within a comment
+#:within-a-comment  within a comment
 
 
 
@@ -48,7 +48,7 @@ Foo bar.
 
 
 
-# _This_  `` section ``  **title** <sub>has <sup>markup
+#:this-section-title-has-markup  _This_  `` section ``  **title** <sub>has <sup>markup
 
 
 But links are impossible thanks to the parser, so we never have trouble rendering a section title in a table of contents – no link will be nested inside another link.

@@ -2,13 +2,13 @@ FunctorF5
 
  Module  `` Functor.F5 `` 
 
-# Parameters
+#:parameters  Parameters
 
 
 
-# Signature
+#:signature  Signature
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 

@@ -10,7 +10,7 @@ This is an  `` .mld ``  file. It doesn't have an auto-generated title, like modu
 It will have a TOC generated from section headings.
 
 
-# Section
+#:section  Section
 
 
 This is a section.
@@ -21,7 +21,7 @@ Another paragraph in section.
 
 
 
-# Another section
+#:another-section  Another section
 
 
 This is another section.

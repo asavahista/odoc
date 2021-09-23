@@ -6,12 +6,12 @@ Nested
 This comment needs to be here before #235 is fixed.
 
 
-# Module
+#:module  Module
 
 
 <a id="module-X"></a>
-###### &nbsp; module X : sig ... 
- ###### &nbsp; end
+###### module X : sig ... 
+###### end
 
 This is module X.
 
@@ -19,11 +19,11 @@ This is module X.
 
 
 
-# Module type
+#:module-type  Module type
 
 
 <a id="module-type-Y"></a>
-###### &nbsp; module type Y = sig
+###### module type Y = sig
 
 
 ### Type
@@ -51,7 +51,7 @@ The value of y.
 
 
 
- ###### &nbsp; end
+###### end
 
 This is module type Y.
 
@@ -59,13 +59,13 @@ This is module type Y.
 
 
 
-# Functor
+#:functor  Functor
 
 
 <a id="module-F"></a>
-###### &nbsp; module F (Arg1 : Y) (Arg2 : sig ... 
- ###### &nbsp; end) : sig ... 
- ###### &nbsp; end
+###### module F (Arg1 : Y) (Arg2 : sig ... 
+###### end) : sig ... 
+###### end
 
 This is a functor F.
 
@@ -73,12 +73,12 @@ This is a functor F.
 
 
 
-# Class
+#:class  Class
 
 
 <a id="class-z"></a>
-###### &nbsp; class virtual  z : object ... 
- ###### &nbsp; end
+###### class virtual  z : object ... 
+###### end
 
 This is class z.
 
@@ -86,8 +86,8 @@ This is class z.
 
 
 <a id="class-inherits"></a>
-###### &nbsp; class virtual  inherits : object ... 
- ###### &nbsp; end
+###### class virtual  inherits : object ... 
+###### end
 
 
 NestedX
@@ -102,11 +102,11 @@ This is module X.
 Some additional comments.
 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -114,11 +114,11 @@ Some type.
 
 
 
-# Values
+#:values  Values
 
 
 <a id="val-x"></a>
-###### &nbsp; val x : t
+###### val x : t
 
 The value of x.
 
@@ -136,11 +136,11 @@ This is module type Y.
 Some additional comments.
 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -148,11 +148,11 @@ Some type.
 
 
 
-# Values
+#:values  Values
 
 
 <a id="val-y"></a>
-###### &nbsp; val y : t
+###### val y : t
 
 The value of y.
 
@@ -170,15 +170,15 @@ This is a functor F.
 Some additional comments.
 
 
-# Type
+#:type  Type
 
 
 
-# Parameters
+#:parameters  Parameters
 
 
 <a id="argument-1-Arg1"></a>
-###### &nbsp; module Arg1 : sig
+###### module Arg1 : sig
 
 
 ### Type
@@ -206,12 +206,12 @@ The value of y.
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="argument-2-Arg2"></a>
-###### &nbsp; module Arg2 : sig
+###### module Arg2 : sig
 
 
 ### Type
@@ -226,16 +226,16 @@ Some type.
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 
-# Signature
+#:signature  Signature
 
 
 <a id="type-t"></a>
-###### &nbsp; type t = Arg1.t * Arg2.t
+###### type t = Arg1.t * Arg2.t
 
 Some type.
 
@@ -245,11 +245,11 @@ NestedF1-Arg1
 
  Parameter  `` F.1-Arg1 `` 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -257,11 +257,11 @@ Some type.
 
 
 
-# Values
+#:values  Values
 
 
 <a id="val-y"></a>
-###### &nbsp; val y : t
+###### val y : t
 
 The value of y.
 
@@ -271,11 +271,11 @@ NestedF2-Arg2
 
  Parameter  `` F.2-Arg2 `` 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -293,7 +293,7 @@ This is class z.
 Some additional comments.
 
 <a id="val-y"></a>
-###### &nbsp; val y : int
+###### val y : int
 
 Some value.
 
@@ -301,16 +301,16 @@ Some value.
 
 
 <a id="val-y'"></a>
-###### &nbsp; val mutable virtual y' : int
+###### val mutable virtual y' : int
 
 
 
 
-# Methods
+#:methods  Methods
 
 
 <a id="method-z"></a>
-###### &nbsp; method z : int
+###### method z : int
 
 Some method.
 
@@ -318,12 +318,12 @@ Some method.
 
 
 <a id="method-z'"></a>
-###### &nbsp; method private virtual z' : int
+###### method private virtual z' : int
 
 
 Nestedinherits
 
  Class  `` Nested.inherits `` 
 <a id=""></a>
-###### &nbsp; inherit z
+###### inherit z
 

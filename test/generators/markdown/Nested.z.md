@@ -10,7 +10,7 @@ This is class z.
 Some additional comments.
 
 <a id="val-y"></a>
-###### &nbsp; val y : int
+###### val y : int
 
 Some value.
 
@@ -18,16 +18,16 @@ Some value.
 
 
 <a id="val-y'"></a>
-###### &nbsp; val mutable virtual y' : int
+###### val mutable virtual y' : int
 
 
 
 
-# Methods
+#:methods  Methods
 
 
 <a id="method-z"></a>
-###### &nbsp; method z : int
+###### method z : int
 
 Some method.
 
@@ -35,5 +35,5 @@ Some method.
 
 
 <a id="method-z'"></a>
-###### &nbsp; method private virtual z' : int
+###### method private virtual z' : int
 

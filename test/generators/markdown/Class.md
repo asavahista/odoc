@@ -2,57 +2,57 @@ Class
 
  Module  `` Class `` 
 <a id="class-type-empty"></a>
-###### &nbsp; class type  empty = object
+###### class type  empty = object
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-type-mutually"></a>
-###### &nbsp; class type  mutually = object
+###### class type  mutually = object
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-type-recursive"></a>
-###### &nbsp; class type  recursive = object
+###### class type  recursive = object
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-mutually'"></a>
-###### &nbsp; class  mutually' : mutually
+###### class  mutually' : mutually
 
 
 
 <a id="class-recursive'"></a>
-###### &nbsp; class  recursive' : recursive
+###### class  recursive' : recursive
 
 
 
 <a id="class-type-empty_virtual"></a>
-###### &nbsp; class type virtual  empty_virtual = object
+###### class type virtual  empty_virtual = object
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-empty_virtual'"></a>
-###### &nbsp; class virtual  empty_virtual' : empty
+###### class virtual  empty_virtual' : empty
 
 
 
 <a id="class-type-polymorphic"></a>
-###### &nbsp; class type 'a polymorphic = object
+###### class type 'a polymorphic = object
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="class-polymorphic'"></a>
-###### &nbsp; class 'a polymorphic' : 'a polymorphic
+###### class 'a polymorphic' : 'a polymorphic
 
 
 Classempty

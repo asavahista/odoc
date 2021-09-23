@@ -10,15 +10,15 @@ This is a functor F.
 Some additional comments.
 
 
-# Type
+#:type  Type
 
 
 
-# Parameters
+#:parameters  Parameters
 
 
 <a id="argument-1-Arg1"></a>
-###### &nbsp; module Arg1 : sig
+###### module Arg1 : sig
 
 
 ### Type
@@ -46,12 +46,12 @@ The value of y.
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 <a id="argument-2-Arg2"></a>
-###### &nbsp; module Arg2 : sig
+###### module Arg2 : sig
 
 
 ### Type
@@ -66,16 +66,16 @@ Some type.
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 
-# Signature
+#:signature  Signature
 
 
 <a id="type-t"></a>
-###### &nbsp; type t = Arg1.t * Arg2.t
+###### type t = Arg1.t * Arg2.t
 
 Some type.
 
@@ -85,11 +85,11 @@ NestedF1-Arg1
 
  Parameter  `` F.1-Arg1 `` 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 
@@ -97,11 +97,11 @@ Some type.
 
 
 
-# Values
+#:values  Values
 
 
 <a id="val-y"></a>
-###### &nbsp; val y : t
+###### val y : t
 
 The value of y.
 
@@ -111,11 +111,11 @@ NestedF2-Arg2
 
  Parameter  `` F.2-Arg2 `` 
 
-# Type
+#:type  Type
 
 
 <a id="type-t"></a>
-###### &nbsp; type t
+###### type t
 
 Some type.
 

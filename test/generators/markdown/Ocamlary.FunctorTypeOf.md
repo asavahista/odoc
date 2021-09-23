@@ -6,11 +6,11 @@ OcamlaryFunctorTypeOf
 This comment is for  `` FunctorTypeOf `` .
 
 
-# Parameters
+#:parameters  Parameters
 
 
 <a id="argument-1-Collection"></a>
-###### &nbsp; module Collection : sig
+###### module Collection : sig
 
 This comment is for  `` CollectionModule `` .
 
@@ -33,7 +33,7 @@ This comment is for  `` collection `` .
 ###### &nbsp; &nbsp; &nbsp; &nbsp; module InnerModuleA : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = collection
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = collection
 
 This comment is for  `` t `` .
 
@@ -41,17 +41,17 @@ This comment is for  `` t `` .
 
 
 <a id="module-InnerModuleA'"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module InnerModuleA' : sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module InnerModuleA' : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = (unit, unit) a_function
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = (unit, unit) a_function
 
 This comment is for  `` t `` .
 
 
 
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end
 
 This comment is for  `` InnerModuleA' `` .
 
@@ -59,24 +59,24 @@ This comment is for  `` InnerModuleA' `` .
 
 
 <a id="module-type-InnerModuleTypeA'"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module type InnerModuleTypeA' = sig
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; module type InnerModuleTypeA' = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = InnerModuleA'.t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = InnerModuleA'.t
 
 This comment is for  `` t `` .
 
 
 
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; end
 
 This comment is for  `` InnerModuleTypeA' `` .
 
 
 
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; end
 
 This comment is for  `` InnerModuleA `` .
 
@@ -91,16 +91,16 @@ This comment is for  `` InnerModuleTypeA `` .
 
 
 
- ###### &nbsp; end
+###### end
 
 
 
 
-# Signature
+#:signature  Signature
 
 
 <a id="type-t"></a>
-###### &nbsp; type t = Collection.collection
+###### type t = Collection.collection
 
 This comment is for  `` t `` .
 
@@ -114,7 +114,7 @@ This comment is for  `` CollectionModule `` .
 
 
 <a id="type-collection"></a>
-###### &nbsp; type collection
+###### type collection
 
 This comment is for  `` collection `` .
 
@@ -122,12 +122,12 @@ This comment is for  `` collection `` .
 
 
 <a id="type-element"></a>
-###### &nbsp; type element
+###### type element
 
 
 
 <a id="module-InnerModuleA"></a>
-###### &nbsp; module InnerModuleA : sig
+###### module InnerModuleA : sig
 
 <a id="type-t"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; type t = collection
@@ -141,14 +141,14 @@ This comment is for  `` t `` .
 ###### &nbsp; &nbsp; &nbsp; &nbsp; module InnerModuleA' : sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = (unit, unit) a_function
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = (unit, unit) a_function
 
 This comment is for  `` t `` .
 
 
 
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; end
 
 This comment is for  `` InnerModuleA' `` .
 
@@ -159,21 +159,21 @@ This comment is for  `` InnerModuleA' `` .
 ###### &nbsp; &nbsp; &nbsp; &nbsp; module type InnerModuleTypeA' = sig
 
 <a id="type-t"></a>
-###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = InnerModuleA'.t
+###### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type t = InnerModuleA'.t
 
 This comment is for  `` t `` .
 
 
 
 
- ###### &nbsp; end
+###### &nbsp; &nbsp; &nbsp; &nbsp; end
 
 This comment is for  `` InnerModuleTypeA' `` .
 
 
 
 
- ###### &nbsp; end
+###### end
 
 This comment is for  `` InnerModuleA `` .
 
@@ -181,7 +181,7 @@ This comment is for  `` InnerModuleA `` .
 
 
 <a id="module-type-InnerModuleTypeA"></a>
-###### &nbsp; module type InnerModuleTypeA = InnerModuleA.InnerModuleTypeA'
+###### module type InnerModuleTypeA = InnerModuleA.InnerModuleTypeA'
 
 This comment is for  `` InnerModuleTypeA `` .
 
@@ -195,7 +195,7 @@ OcamlaryFunctorTypeOf1-CollectionInnerModuleA
 This comment is for  `` InnerModuleA `` .
 
 <a id="type-t"></a>
-###### &nbsp; type t = collection
+###### type t = collection
 
 This comment is for  `` t `` .
 
@@ -203,7 +203,7 @@ This comment is for  `` t `` .
 
 
 <a id="module-InnerModuleA'"></a>
-###### &nbsp; module InnerModuleA' : sig
+###### module InnerModuleA' : sig
 
 <a id="type-t"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; type t = (unit, unit) a_function
@@ -213,7 +213,7 @@ This comment is for  `` t `` .
 
 
 
- ###### &nbsp; end
+###### end
 
 This comment is for  `` InnerModuleA' `` .
 
@@ -221,7 +221,7 @@ This comment is for  `` InnerModuleA' `` .
 
 
 <a id="module-type-InnerModuleTypeA'"></a>
-###### &nbsp; module type InnerModuleTypeA' = sig
+###### module type InnerModuleTypeA' = sig
 
 <a id="type-t"></a>
 ###### &nbsp; &nbsp; &nbsp; &nbsp; type t = InnerModuleA'.t
@@ -231,7 +231,7 @@ This comment is for  `` t `` .
 
 
 
- ###### &nbsp; end
+###### end
 
 This comment is for  `` InnerModuleTypeA' `` .
 
@@ -245,7 +245,7 @@ OcamlaryFunctorTypeOf1-CollectionInnerModuleAInnerModuleA'
 This comment is for  `` InnerModuleA' `` .
 
 <a id="type-t"></a>
-###### &nbsp; type t = (unit, unit) a_function
+###### type t = (unit, unit) a_function
 
 This comment is for  `` t `` .
 
@@ -259,7 +259,7 @@ OcamlaryFunctorTypeOf1-CollectionInnerModuleAInnerModuleTypeA'
 This comment is for  `` InnerModuleTypeA' `` .
 
 <a id="type-t"></a>
-###### &nbsp; type t = InnerModuleA'.t
+###### type t = InnerModuleA'.t
 
 This comment is for  `` t `` .
 
