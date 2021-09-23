@@ -2,9 +2,48 @@ open Odoc_document
 open Types
 open Doctree
 
-module Markup = struct
+module Markup : sig
+  type t
+
+  val noop : t
+
+  val break : t
+
+  val nbsp : t
+
+  val space : t
+
+  val backticks : t
+
+  val open_sq_bracket : t
+
+  val close_sq_bracket : t
+
+  val ( ++ ) : t -> t -> t
+
+  val concat : t list -> t
+
+  val inline' : string list -> t
+
+  val block' : t list -> t
+
+  val list : ?sep:t -> t list -> t
+
+  val anchor' : string -> t
+
+  val string : string -> t
+
+  val str : ('a, unit, string, t) format4 -> 'a
+
+  val escaped : ('a, unit, string, t) format4 -> 'a
+
+  val open_parenthesis : t
+
+  val close_parenthesis : t
+
+  val pp : Format.formatter -> t -> unit
+end = struct
   type t =
-    | Inline of string list
     | Block of t list
     | Concat of t list
     | Break
@@ -54,13 +93,16 @@ module Markup = struct
 
   let string s = String s
 
+  let block' ts = Block ts
+
+  let inline' l = List.map (fun s -> string s) l |> concat
+
   let str fmt = Format.ksprintf (fun s -> string s) fmt
 
   let escaped fmt = Format.ksprintf (fun s -> string s) fmt
 
   let rec pp fmt t =
     match t with
-    | Inline s -> Format.fprintf fmt "%s" (String.concat "" s)
     | Block b ->
         let inner = function
           | [] -> ()
@@ -77,7 +119,7 @@ module Markup = struct
        within backtick, and the spaces before and after the backticks for
        clarity on what should be enclosed in backticks. For example,
        "type nums = [ | `One | `Two ]" would be rendered as "``|`````Monday`` "
-       if the spaces were not there.
+       if the spaces were missing.
     *)
     | Backticks -> Format.fprintf fmt " `` "
     | Nbsp -> Format.fprintf fmt "&nbsp; "
@@ -103,49 +145,45 @@ let style (style : style) content =
   | `Superscript -> string "<sup>" ++ content
   | `Subscript -> string "<sub>" ++ content
 
-(*I'm not sure if `make_hashes` is the best name to use! *)
 let make_hashes n = String.make n '#'
 
 type args = { generate_links : bool ref }
 
 let args = { generate_links = ref true }
 
-let rec source_code (s : Source.t) =
+let rec source_code (s : Source.t) nbsp =
   match s with
   | [] -> noop
   | h :: t -> (
+      let continue s = if s = [] then concat [] else source_code s nbsp in
       match h with
-      | Source.Elt i -> inline i ++ source_code t
-      | Tag (None, s) -> source_code s ++ source_code t
-      | Tag (Some _, s) -> source_code s ++ source_code t)
+      | Source.Elt i -> inline i nbsp ++ continue t
+      | Tag (None, s) -> continue s ++ continue t
+      | Tag (Some _, s) -> continue s ++ continue t)
 
-and inline (l : Inline.t) =
+and inline (l : Inline.t) nbsp =
   match l with
   | [] -> noop
   | i :: rest -> (
+      let continue i = if i = [] then noop else inline i nbsp in
       match i.desc with
-      | Text "" -> inline rest
-      | Text _ ->
-          let l, _, rest =
-            Doctree.Take.until l ~classify:(function
-              | { Inline.desc = Text s; _ } -> (
-                  match s with
-                  | "end" ->
-                      Accum
-                        [
-                          break ++ space
-                          ++ string (make_hashes 6)
-                          ++ space ++ nbsp ++ string s;
-                        ]
-                  | _ -> Accum [ str "%s" s ])
-              | _ -> Stop_and_keep)
-          in
-          concat l ++ inline rest
+      | Text "" -> continue rest
+      | Text s -> (
+          match s with
+          | "end" ->
+              break ++ string (make_hashes 6) ++ space ++ nbsp ++ string s
+          | _ ->
+              let l, _, rest =
+                Doctree.Take.until l ~classify:(function
+                  | { Inline.desc = Text s; _ } -> Accum [ str "%s" s ]
+                  | _ -> Stop_and_keep)
+              in
+              concat l ++ continue rest)
       | Entity e ->
           let x = entity e in
-          x ++ inline rest
-      | Styled (sty, content) -> style sty (inline content) ++ inline rest
-      | Linebreak -> break ++ inline rest
+          x ++ continue rest
+      | Styled (sty, content) -> style sty (continue content) ++ continue rest
+      | Linebreak -> break ++ continue rest
       | Link (href, content) ->
           if !(args.generate_links) then
             match content with
@@ -153,35 +191,35 @@ and inline (l : Inline.t) =
             | i :: rest ->
                 (match i.desc with
                 | Text _ ->
-                    open_sq_bracket ++ inline content ++ close_sq_bracket
+                    open_sq_bracket ++ continue content ++ close_sq_bracket
                     ++ open_parenthesis ++ string href ++ close_parenthesis
-                    ++ inline rest
-                | _ -> inline content ++ inline rest)
-                ++ inline rest
-          else inline content ++ inline rest
+                    ++ continue rest
+                | _ -> continue content ++ continue rest)
+                ++ continue rest
+          else continue content ++ continue rest
       | InternalLink (Resolved (link, content)) ->
           if !(args.generate_links) then
             match link.page.parent with
-            | Some _ -> inline content ++ inline rest
+            | Some _ -> continue content ++ continue rest
             | None ->
-                open_sq_bracket ++ inline content ++ close_sq_bracket
+                open_sq_bracket ++ continue content ++ close_sq_bracket
                 ++ open_parenthesis
                 ++ string (make_hashes 1 ^ link.anchor)
-                ++ close_parenthesis ++ inline rest
-          else inline content ++ inline rest
-      | InternalLink (Unresolved content) -> inline content ++ inline rest
+                ++ close_parenthesis ++ continue rest
+          else continue content ++ continue rest
+      | InternalLink (Unresolved content) -> continue content ++ continue rest
       | Source content ->
-          backticks ++ source_code content ++ backticks ++ inline rest
-      | Raw_markup t -> raw_markup t ++ inline rest)
+          backticks ++ source_code content nbsp ++ backticks ++ continue rest
+      | Raw_markup t -> raw_markup t ++ continue rest)
 
-let rec block (l : Block.t) =
+let rec block (l : Block.t) nbsp =
   match l with
   | [] -> noop
   | b :: rest -> (
-      let continue r = if r = [] then noop else break ++ block r in
+      let continue r = if r = [] then noop else break ++ block r nbsp in
       match b.desc with
-      | Inline i -> inline i ++ continue rest
-      | Paragraph i -> inline i ++ break ++ break ++ continue rest
+      | Inline i -> inline i nbsp ++ continue rest
+      | Paragraph i -> inline i nbsp ++ break ++ break ++ continue rest
       | List (list_typ, l) ->
           let f n b =
             let bullet =
@@ -189,7 +227,7 @@ let rec block (l : Block.t) =
               | Unordered -> escaped "- "
               | Ordered -> str "%d. " (n + 1)
             in
-            bullet ++ block b ++ break
+            bullet ++ block b nbsp ++ break
           in
           list ~sep:break (List.mapi f l) ++ continue rest
       | Description _ ->
@@ -199,16 +237,14 @@ let rec block (l : Block.t) =
               | _ -> Stop_and_keep)
           in
           let f i =
-            let key = inline i.Description.key in
-            let def = block i.Description.definition in
+            let key = inline i.Description.key nbsp in
+            let def = block i.Description.definition nbsp in
             break ++ str "@" ++ key ++ str " : " ++ def ++ break ++ break
           in
           list ~sep:break (List.map f descrs) ++ continue rest
-      | Source content -> source_code content ++ continue rest
-      (*TODO: I'm not sure if indenting using spaces is the better way, or
-        creating an indent constructor*)
+      | Source content -> source_code content nbsp ++ continue rest
       | Verbatim content ->
-          space ++ space ++ space ++ str "%s" content ++ continue rest
+          space ++ space ++ space ++ space ++ str "%s" content ++ continue rest
       | Raw_markup t -> raw_markup t ++ continue rest)
 
 let expansion_not_inlined url = not (Link.should_inline url)
@@ -224,10 +260,9 @@ let take_code l =
   in
   (c, rest)
 
-let heading { Heading.label; level; title } =
+let heading { Heading.label; level; title } nbsp =
   let level =
     match level with
-    (*TODO: We may want to create markup type for these! *)
     | 1 -> make_hashes 1
     | 2 -> make_hashes 2
     | 3 -> make_hashes 3
@@ -238,11 +273,12 @@ let heading { Heading.label; level; title } =
     (* We can be sure that h6 will never be exceded! *)
   in
   match label with
-  | Some _ -> (
+  | Some l -> (
+      (*TODO: Improve this! ! *)
       match level with
-      | "#" -> string level ++ (space ++ inline title)
-      | _ -> string level ++ (space ++ inline title ++ break ++ str "---"))
-  | None -> string level ++ space ++ inline title
+      | "#" -> string level ++ str ":%s " l ++ (space ++ inline title nbsp)
+      | _ -> string level ++ (space ++ inline title nbsp ++ break ++ str "---"))
+  | None -> string level ++ space ++ inline title nbsp
 
 let inline_subpage = function
   | `Inline | `Open | `Default -> true
@@ -250,22 +286,24 @@ let inline_subpage = function
 
 let item_prop nbsp = string (make_hashes 6) ++ space ++ nbsp
 
-let rec documented_src (l : DocumentedSrc.t) nbsp =
+let rec documented_src (l : DocumentedSrc.t) nbsp nbsp' =
   match l with
   | [] -> noop
   | line :: rest -> (
-      let continue r = documented_src r nbsp in
+      let continue l =
+        if l = [] then concat [] else documented_src l nbsp nbsp'
+      in
       match line with
       | Code _ ->
           let c, rest = take_code l in
-          source_code c ++ continue rest
+          source_code c nbsp' ++ continue rest
       | Alternative alt -> (
           match alt with
           | Expansion { expansion; url; _ } ->
               if expansion_not_inlined url then
                 let c, rest = take_code l in
-                source_code c ++ continue rest
-              else documented_src expansion nbsp)
+                source_code c nbsp' ++ continue rest
+              else documented_src expansion nbsp nbsp')
       | Subpage p -> subpage p.content nbsp ++ continue rest
       | Documented _ | Nested _ ->
           let lines, _, rest =
@@ -277,11 +315,11 @@ let rec documented_src (l : DocumentedSrc.t) nbsp =
               | _ -> Stop_and_keep)
           in
           let f (content, doc, (anchor : Odoc_document.Url.t option)) =
-            let doc = match doc with [] -> noop | doc -> block doc in
+            let doc = match doc with [] -> noop | doc -> block doc nbsp in
             let content =
               match content with
-              | `D code -> inline code
-              | `N l -> documented_src l nbsp
+              | `D code -> inline code nbsp
+              | `N l -> documented_src l nbsp nbsp'
             in
             let anchor = match anchor with Some a -> a.anchor | None -> "" in
             break ++ break ++ anchor' anchor ++ break ++ item_prop nbsp
@@ -297,29 +335,35 @@ and subpage { title = _; header = _; items; url = _ } nbsp =
   in
   surround @@ item nbsp content
 
-and item nbsp (l : Item.t list) : Markup.t =
+and item nbsp' (l : Item.t list) : Markup.t =
   match l with
   | [] -> noop
   | i :: rest -> (
-      let continue r = if r = [] then noop else break ++ break ++ item nbsp r in
+      let continue r =
+        if r = [] then noop else break ++ break ++ item nbsp' r
+      in
       match i with
-      | Text b -> block b ++ continue rest
-      | Heading h -> break ++ heading h ++ break ++ continue rest
+      | Text b -> block b nbsp' ++ continue rest
+      | Heading h -> break ++ heading h nbsp' ++ break ++ continue rest
       | Declaration { attr = _; anchor; content; doc } ->
-          let nbsp' = nbsp ++ nbsp ++ nbsp in
-          let decl = documented_src content (nbsp ++ nbsp') in
-          let doc = match doc with [] -> noop | doc -> block doc ++ break in
+          let nbsp'' = nbsp ++ nbsp ++ nbsp ++ nbsp in
+          let decl = documented_src content (nbsp' ++ nbsp'') nbsp' in
+          let doc =
+            match doc with [] -> noop | doc -> block doc nbsp' ++ break
+          in
           let anchor = match anchor with Some x -> x.anchor | None -> "" in
-          anchor' anchor ++ break ++ item_prop nbsp ++ decl ++ break ++ break
+          anchor' anchor ++ break ++ item_prop nbsp' ++ decl ++ break ++ break
           ++ doc ++ continue rest
       | Include
           { attr = _; anchor = _; content = { summary; status; content }; doc }
         ->
           let d =
-            if inline_subpage status then item nbsp content
+            if inline_subpage status then item nbsp' content
             else
-              let s = source_code summary in
-              match doc with [] -> s | doc -> s ++ break ++ break ++ block doc
+              let s = source_code summary nbsp' in
+              match doc with
+              | [] -> s
+              | doc -> s ++ break ++ break ++ block doc nbsp'
           in
           d ++ continue rest)
 
@@ -339,9 +383,9 @@ and page generate_links ({ Page.header; items; url; _ } as p) =
   let header = Shift.compute ~on_sub header in
   let items = Shift.compute ~on_sub items in
   let subpages = subpages p generate_links in
-  Block
-    ([ Inline (Link.for_printing url) ]
-    @ [ item nbsp header ++ item nbsp items ]
+  block'
+    ([ inline' (Link.for_printing url) ]
+    @ [ item (str "") header ++ item (str "") items ]
     @ subpages)
 
 let rec subpage subp =
